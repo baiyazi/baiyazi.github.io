@@ -410,7 +410,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        589
+                        591
                     </div>
                     
 
@@ -440,8 +440,15 @@
 <p>在爬取网页的时候需要考虑如何去重、网页的搜索策略（深度优先和广度优先）、爬虫边界等</p>
 <h1 id="Scrapy框架的工作原理"><a href="#Scrapy框架的工作原理" class="headerlink" title="Scrapy框架的工作原理"></a>Scrapy框架的工作原理</h1><p>爬虫可以不使用scrapy框架，但是从头开发一个爬虫程序很麻烦。scrapy框架是比较优秀的爬虫框架，有人造好了轮子，我们就不需要再去造了。<br>毫无疑问，使用框架可以降低开发成本，提高程序的质量，让我们更专注于爬虫的业务逻辑。</p>
 <h2 id="Scrapy框架的组成"><a href="#Scrapy框架的组成" class="headerlink" title="Scrapy框架的组成"></a>Scrapy框架的组成</h2><p>百度了一张图片：<br><img src="/images/201906/1036857-20171109221422778-1731419400.png" alt="e" title="scrapy框架图示"></p>
-<link href="/css/spider.css" rel="stylesheet" type="text/css">
-<ul class="three"><li class="lihead"><span>ENGINE</span><span>引擎，框架的核心</span><span>内部组件</span></li><li><span>ENGINE</span><span>引擎，框架的核心</span><span>内部组件</span></li><li><span>SCHEDULER</span><span>调度器，负责对SPIDER提交的下载请求进行调度</span><span>内部组件</span></li><li><span>DOWNLOADER</span><span>下载器，负责下载页面</span><span>内部组件</span></li><li><span>SPIDER</span><span>爬虫，页面请求下载，提取页面内数据</span><span>用户实现</span></li><li><span>MIDDLEWARE</span><span>中间件，负责对Request和Response对象进行处理</span><span>可选组件</span></li><li class="liend"><span>ITEM PIPELINE</span><span>数据通道，负责对爬到的数据进行处理</span><span>可选组件</span></li></ul>
+<table>
+  <tr><td>ENGINE</td><td>引擎，框架的核心</td><td>内部组件</td></tr>
+  <tr><td>ENGINE</td><td>引擎，框架的核心</td><td>内部组件</td></tr>
+  <tr><td>SCHEDULER</td><td>调度器，负责对SPIDER提交的下载请求进行调度</td><td>内部组件</td></tr>
+  <tr><td>DOWNLOADER</td><td>下载器，负责下载页面</td><td>内部组件</td></tr>
+  <tr><td>SPIDER</td><td>爬虫，页面请求下载，提取页面内数据</td><td>用户实现</td></tr>
+  <tr><td>MIDDLEWARE</td><td>中间件，负责对Request和Response对象进行处理</td><td>可选组件</td></tr>
+  <tr><td>ITEM PIPELINE</td><td>数据通道，负责对爬到的数据进行处理</td><td>可选组件</td></tr>
+  </table>
 对于使用框架的开发者而言，我们需要做的就是’关心‘Spider
 
 <h1 id="Spider开发流程"><a href="#Spider开发流程" class="headerlink" title="Spider开发流程"></a>Spider开发流程</h1><p>可以参看第一个例子，很容易得出结论，分四步：<br>①写一个类继承<code>scrapy.Spider</code><br>继承<code>Scrapy</code>框架提供的一个<code>Spider</code>基类<br>②为<code>Spider</code>取名，即设置<code>name</code><br>一个项目可以有多个<code>Spider</code>，每一个爬虫之间需要一个区分标志，即<code>name</code>。<br>③设置起始爬取点，即设置<code>start_ruls</code><br>④实现页面解析函数，即<code>parse(self, response)</code></p>
@@ -902,7 +909,7 @@ Scrapy的Selector
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">105k</span>
+                <span class="white-color">105.8k</span>
             
 
             

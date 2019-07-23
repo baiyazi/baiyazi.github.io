@@ -419,14 +419,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                        10.3k
+                        10.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                        46 Min
+                        48 Min
                     </div>
                     
                 
@@ -783,8 +783,119 @@ response <span class="token operator">=</span> requests<span class="token punctu
 <li><code>JsonPath</code></li>
 <li><code>CSS</code>选择器</li>
 </ol>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><link href="/css/spider.css" rel="stylesheet" type="text/css"><ul class="two"><li class="headbg lihead">      <span>语法</span>      <span>说明</span>    </li>    <li class="info"><span>字符</span></li>    <li>      <span>一般字符</span>      <span>匹配自身。如：a，即匹配a字符</span>    </li>    <li>      <span>.</span>      <span>匹配除了"\n"外的任意字符（注意：只是一个字符）</span>    </li>    <li>      <span>\</span>      <span>转义字符。如：\.c，即.c；\c，即\c</span>    </li>    <li>      <span>[...]</span>      <span>字符集，如:[abc]或[a-c]，表示abc；如果是[^abc]，表示不是abc的其他字符</span>    </li>    <li class="info"><span>预定义字符</span></li>    <li>      <span>\d</span>      <span>表示数字，即[0-9]</span>    </li>    <li>      <span>\D</span>      <span>表示非数字，即[^0-9]</span>    </li>    <li>      <span>\s</span>      <span>表示空白字符，如空格、回车、换行等</span>    </li>    <li>      <span>\S</span>      <span>表示非空白字符，即[^\s]</span>    </li>    <li>      <span>\w</span>      <span>表示单词字符，即[A-Za-z0-9_]</span>    </li>    <li>      <span>\W</span>      <span>非单词字符，即[^\w]</span>    </li>    <li class="info"><span>数量词</span></li>    <li>      <span>\*</span>      <span>表示前一个字符0次或者无限次，如abc*</span>    </li>    <li>      <span>+</span>      <span>表示匹配前一个字符1次或者无限次</span>    </li>    <li>      <span>？</span>      <span>表示匹配前一个字符0次或者一次</span>    </li>    <li>      <span>{m}</span>      <span>表示匹配前一个字符m次</span>    </li>    <li>      <span>{m,n}</span>      <span>表示匹配前一个字符m至n次</span>    </li>    <li class="info"><span>边界匹配</span></li>    <li>      <span>^</span>      <span>表示匹配字符串开头，在多行模式中匹配每一行开头</span>    </li>    <li>      <span>$</span>      <span>表示匹配字符串末尾，在多行模式中匹配每一张末尾</span>    </li>    <li>      <span>\A</span>      <span>表示仅匹配字符串开头</span>    </li>    <li>      <span>\Z</span>      <span>表示仅匹配字符串末尾</span>    </li>    <li>      <span>\b</span>      <span>匹配\w和\W之间</span>    </li>    <li>      <span>\B</span>      <span>表示[^\b]</span>    </li>    <li class="info"><span>逻辑与分组</span></li>    <li>      <span>|</span>      <span>表示匹配左右表达式中任意一个，先尝试匹配左边的表达式，一旦匹配成功就跳过匹配右边的表达式</span>    </li>    <li class="liend">      <span>(...)</span>      <span>被括起来的表达式将被分组，从表达式左边开始每遇到一个分组的左括号'('，编号加一。分组表达式作为一个整体，可以后接数量词，</span>    </li></ul>
-
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2> <table border="1">
+  <tr>
+    <td>语法</td>
+    <td>说明</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">字符</td>
+  </tr>
+  <tr>
+    <td>一般字符</td>
+    <td> 匹配自身。如：a，即匹配a字符</td>
+  </tr>
+  <tr>
+    <td>. </td>
+    <td>匹配除了"\n"外的任意字符（注意：只是一个字符）</td>
+  </tr>
+  <tr>
+    <td>\ </td>
+    <td>转义字符。如：\.c，即.c；\c，即\c</td>
+  </tr>
+  <tr>
+    <td>[...]</td>
+    <td>字符集，如:[abc]或[a-c]，表示abc；如果是[^abc]，表示不是abc的其他字符</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">预定义字符</td>
+  </tr>
+  <tr>
+    <td>\d </td>
+    <td>表示数字，即[0-9]</td>
+  </tr>
+  <tr>
+    <td>\D </td>
+    <td>表示非数字，即[^0-9]</td>
+  </tr>
+  <tr>
+    <td>\s </td>
+    <td>表示空白字符，如空格、回车、换行等</td>
+  </tr>
+  <tr>
+    <td>\S </td>
+    <td>表示非空白字符，即[^\s]</td>
+  </tr>
+  <tr>
+    <td>\w </td>
+    <td>表示单词字符，即[A-Za-z0-9_]</td>
+  </tr>
+  <tr>
+    <td>\W </td>
+    <td>非单词字符，即[^\w]</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">数量词</td>
+  </tr>
+  <tr>
+    <td>* </td>
+    <td>表示前一个字符0次或者无限次，如abc*</td>
+  </tr>
+  <tr>
+    <td>+ </td>
+    <td>表示匹配前一个字符1次或者无限次</td>
+  </tr>
+  <tr>
+    <td>？ </td>
+    <td>表示匹配前一个字符0次或者一次</td>
+  </tr>
+  <tr>
+    <td>{m}</td>
+    <td> 表示匹配前一个字符m次</td>
+  </tr>
+  <tr>
+    <td>{m,n} </td>
+    <td>表示匹配前一个字符m至n次</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">边界匹配</td>
+  </tr>
+  <tr>
+    <td>^ </td>
+    <td>表示匹配字符串开头，在多行模式中匹配每一行开头</td>
+  </tr>
+  <tr>
+    <td>$</td>
+    <td> 表示匹配字符串末尾，在多行模式中匹配每一张末尾</td>
+  </tr>
+  <tr>
+    <td>\A </td>
+    <td>表示仅匹配字符串开头</td>
+  </tr>
+  <tr>
+    <td>\Z </td>
+    <td>表示仅匹配字符串末尾</td>
+  </tr>
+  <tr>
+    <td>\b </td>
+    <td>匹配\w和\W之间</td>
+  </tr>
+  <tr>
+    <td>\B </td>
+    <td>表示[^\b]</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">逻辑与分组</td>
+  </tr>
+  <tr>
+    <td>| </td>
+    <td>表示匹配左右表达式中任意一个，先尝试匹配左边的表达式，一旦匹配成功就跳过匹配右边的表达式</td>
+  </tr>
+  <tr>
+    <td>(...) </td>
+    <td>被括起来的表达式将被分组，从表达式左边开始每遇到一个分组的左括号'('，编号加一。分组表达式作为一个整体，可以后接数量词，</td>
+  </tr>
+  </table>
 
 <p>正则匹配比较难，一般不怎么用。这里简单介绍介绍一下用法。在<code>Python</code>中，使用正则表达式需要使用<code>re</code>模块。<code>re</code>模块的一般使用步骤如下：</p>
 <ul>
@@ -926,7 +1037,111 @@ resu <span class="token operator">=</span> pattern<span class="token punctuation
 &lt;h2 class=&quot;post-title&quot; itemprop=&quot;name headline&quot;&gt;&lt;a class=&quot;post-title-link&quot; href=&quot;/2019/scrapy-3/&quot; itemprop=&quot;url&quot;&gt;scrapy-3 |Spider开发流程&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 class=&quot;post-title&quot; itemprop=&quot;name headline&quot;&gt;&lt;a class=&quot;post-title-link&quot; href=&quot;/2019/scrapy-2/&quot; itemprop=&quot;url&quot;&gt;scrapy-2 |第一个爬虫程序&lt;/a&gt;&lt;/h2&gt;
 &lt;h2 class=&quot;post-title&quot; itemprop=&quot;name headline&quot;&gt;&lt;a class=&quot;post-title-link&quot; href=&quot;/2019/scrapy-0/&quot; itemprop=&quot;url&quot;&gt;scrapy-0 |Python爬虫基础类库&lt;/a&gt;&lt;/h2&gt;</code></pre><h2 id="XPath选择器"><a href="#XPath选择器" class="headerlink" title="XPath选择器"></a>XPath选择器</h2><p>无疑，正则比较不怎么好用。需要比较熟悉正则表达式的规则，还是比较麻烦的。所以有比较简单的<code>XPath</code>来处理<code>xml</code>文档。由于<code>html</code>是特殊的<code>xml</code>文档，故而也可使用<code>XPath</code>。<br>可以安装：<code>Chrome</code>插件 <code>XPath Helper</code>，比较方便编程。</p>
-<ul class="two"><li class="headbg lihead">      <span>表达式</span>      <span>说明</span>    </li>    <li class="info"><span>选取节点</span></li>    <li>      <span>nodename</span>      <span>选取此节点的所有子节点。</span>    </li>    <li>      <span>/</span>      <span>从根节点选取。</span>    </li>    <li>      <span>//</span>      <span>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</span>    </li><li>      <span>.</span>      <span>选取当前节点。</span>    </li>    <li>      <span>..</span>      <span>选取当前节点的父节点。</span>    </li>    <li>      <span>@</span>      <span>选取属性。</span>    </li>    <li class="info"><span>**谓语**用来查找某个特定的节点或者包含某个指定的值的节点，被嵌在方括号中。</span></li>    <li>      <span>/bookstore/book[1]</span>      <span>选取属于 bookstore 子元素的第一个 book 元素。</span>    </li>    <li>      <span>/bookstore/book[last()]</span>      <span>选取属于 bookstore 子元素的最后一个 book 元素。</span>    </li>    <li>      <span>/bookstore/book[last()-1]</span>      <span>选取属于 bookstore 子元素的倒数第二个 book 元素。</span>    </li>    <li>      <span>/bookstore/book[position()< 3] </span>      <span>选取最前面的两个属于 bookstore 元素的子元素的 book 元素。</span>    </li>    <li>      <span>//title[@lang]</span>      <span>选取所有拥有名为 lang 的属性的 title 元素。</span>    </li>    <li>      <span>//title[@lang=’eng’]</span>      <span>选取所有 title 元素，且这些元素拥有值为 eng 的 lang 属性。</span>    </li>    <li>      <span>/bookstore/book[price>35.00]</span>      <span>选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</span>    </li>    <li>      <span>/bookstore/book<br>[price>35.00]/title</span>      <span>选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00</span>    </li>    <li class="info"><span>通配符</span></li>    <li>      <span>*</span>      <span>匹配任何元素节点。</span>    </li>    <li>      <span>@*</span>      <span>匹配任何属性节点。</span>    </li>    <li>      <span>node()</span>      <span>匹配任何类型的节点。</span>    </li>    <li>      <span>/bookstore/*</span>      <span>选取 bookstore 元素的所有子元素。</span>    </li>    <li>      <span>//*</span>      <span>选取文档中的所有元素。</span>    </li>    <li>      <span>//title[@*]</span>      <span>选取所有带有属性的 title 元素。</span>    </li>    <li class="info"><span>多选路径</span></li>    <li>      <span>//book/title | //book/price    </span>      <span>选取 book 元素的所有 title 和 price 元素。</span>    </li>    <li>      <span>//title | //price</span>      <span>选取文档中的所有 title 和 price 元素。</span>    </li>    <li class="liend">      <span>/bookstore/book/title | //price    </span>      <span>选取属于 bookstore 元素的 book 元素的所有 title 元素，以及文档中所有的 price 元素。</span>    </li></ul>
+<table border="1">
+  <tr>
+    <td>表达式</td>
+    <td>说明</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">选取节点</td>
+  </tr>
+  <tr>
+    <td>nodename</td>
+    <td>选取此节点的所有子节点。</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>从根节点选取。</td>
+  </tr>
+  <tr>
+    <td>//</td>
+    <td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+  </tr>
+  <tr>
+    <td>.</td>
+    <td>选取当前节点。</td>
+  </tr>
+  <tr>
+    <td>..</td>
+    <td>选取当前节点的父节点。</td>
+  </tr>
+  <tr>
+    <td>@</td>
+    <td>选取属性。</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">谓语用来查找某个特定的节点或者包含某个指定的值的节点，被嵌在方括号中。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book[1]</td>
+    <td>选取属于 bookstore 子元素的第一个 book 元素。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book[last()]</td>
+    <td>选取属于 bookstore 子元素的最后一个 book 元素。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book[last()-1]</td>
+    <td>选取属于 bookstore 子元素的倒数第二个 book 元素。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book[position()< 3]</td>
+    <td>选取最前面的两个属于 bookstore 元素的子元素的 book 元素。</td>
+  </tr>
+  <tr>
+    <td>//title[@lang]</td>
+    <td>选取所有拥有名为 lang 的属性的 title 元素。</td>
+  </tr>
+  <tr>
+    <td>//title[@lang=’eng’]</td>
+    <td>选取所有 title 元素，且这些元素拥有值为 eng 的 lang 属性。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book[price>35.00]</td>
+    <td>选取 bookstore 元素的所有 book 元素，且其中的 price 元素的值须大于 35.00。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/book<br>[price>35.00]/title</td>
+    <td>选取 bookstore 元素中的 book 元素的所有 title 元素，且其中的 price 元素的值须大于 35.00</td>
+  </tr>
+
+  <tr>
+    <td colspan="2" style="text-align:center;">通配符</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>匹配任何元素节点。</td>
+  </tr>
+  <tr>
+    <td>@</td>
+    <td>匹配任何属性节点。</td>
+  </tr>
+  <tr>
+    <td>node()</td>
+    <td>匹配任何类型的节点。</td>
+  </tr>
+  <tr>
+    <td>/bookstore/</td>
+    <td>选取 bookstore 元素的所有子元素。</td>
+  </tr>
+  <tr>
+    <td>//</td>
+    <td>选取文档中的所有元素。</td>
+  </tr>
+  <tr>
+    <td>//title[@*]</td>
+    <td>选取所有带有属性的 title 元素。</td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center;">多选路径</td>
+  </tr>
+<tr><td>//book/title | //book/price</td><td>
+选取 book 元素的所有 title 和 price 元素。</td></tr>
+<tr><td>//title | //price</td><td>
+选取文档中的所有 title 和 price 元素。</td></tr>
+<tr><td>/bookstore/book/title | //price</td><td>
+选取属于 bookstore 元素的 book 元素的所有 title 元素，以及文档中所有的 price 元素。</td></tr>
+  </table>
 
 <p>值得注意的是<code>XPath</code>全名是<code>XML Path Language</code>。也就是它是基于<code>xml</code>的一种路径选择语言，在<code>xml</code>文档中查找信息。<strong>在运用到<code>Python</code>抓取时要先转换为<code>xml</code>。</strong><br>故而我们需要先了解如何将一个文本页转换成xml节点树。</p>
 <h3 id="lxml解析器"><a href="#lxml解析器" class="headerlink" title="lxml解析器"></a>lxml解析器</h3><p><code>lxml</code> 是 一个<code>HTML/XML</code>的解析器，主要的功能是如何解析和提取 <code>HTML/XML</code> 数据。<br><code>lxml python</code> 官方文档：<a href="http://lxml.de/index.html" target="_blank" rel="noopener">http://lxml.de/index.html</a><br>下面简单看一个案例：</p>
@@ -947,11 +1162,11 @@ result <span class="token operator">=</span> etree<span class="token punctuation
 <span class="token comment" spellcheck="true"># 默认的编码是 ASCII</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p>结果：</p>
-<pre class=" language-text"><code class="language-text"><class 'lxml.etree._Element'>
-<html>
-  <body><ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul>
-</body>
-</html></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">'lxml.etree._Element'</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>link1.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>壹 item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item-1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>link2.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>贰 item<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
 <p>不难看出，大致补全了<code>HTML</code>文档结构。<br>下面，我们看看<code>xpath</code>是如何使用的，我们这里就来查找一下<code>a</code>标签：</p>
 <pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 使用 lxml 的 etree 库</span>
 <span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
@@ -1006,13 +1221,14 @@ a_list <span class="token operator">=</span> html<span class="token punctuation"
     """</span>
     <span class="token keyword">pass</span></code></pre>
 <p>可以放置的资源文件可以是一个文件路径、文件对象、文件链接地址。比较方便。<br>案例：</p>
-<pre><code>from lxml import etree
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
 
-# 读取外部文件 hello.html
-html = etree.parse(&#39;./hello.html&#39;)
-result = etree.tostring(html,encoding=&quot;utf-8&quot;， pretty_print=True)
+<span class="token comment" spellcheck="true"># 读取外部文件 hello.html</span>
+html <span class="token operator">=</span> etree<span class="token punctuation">.</span>parse<span class="token punctuation">(</span><span class="token string">'./hello.html'</span><span class="token punctuation">)</span>
+result <span class="token operator">=</span> etree<span class="token punctuation">.</span>tostring<span class="token punctuation">(</span>html<span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span>， pretty_print<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 
-print(result.decode(&quot;utf-8&quot;))</code></pre><h3 id="爬虫-使用XPath解析案例"><a href="#爬虫-使用XPath解析案例" class="headerlink" title="爬虫+使用XPath解析案例"></a>爬虫+使用XPath解析案例</h3><p>下面一起看看案例，我们下载<a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 即网站主页的图片，检查代码如下：</p>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h3 id="爬虫-使用XPath解析案例"><a href="#爬虫-使用XPath解析案例" class="headerlink" title="爬虫+使用XPath解析案例"></a>爬虫+使用XPath解析案例</h3><p>下面一起看看案例，我们下载<a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 即网站主页的图片，检查代码如下：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>site-author-image<span class="token punctuation">"</span></span> <span class="token attr-name">itemprop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>image<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/images/avatar.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>无涯明月<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <p>很容易得出<code>img</code>标签的<code>src</code>地址<code>XPath</code>，可以是<code>//img/@src</code></p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> urllib
@@ -1054,82 +1270,113 @@ resu <span class="token operator">=</span> <span class="token punctuation">[</sp
 <p>然后，在<code>D</code>盘中就可以看见下载的两种图片。</p>
 <h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><p>和<code>lxml</code> 一样，<code>Beautiful Soup</code> 也是一个<code>HTML/XML</code>的解析器，主要的功能也是如何解析和提取 <code>HTML/XML</code> 数据。<br>官方文档：<a href="http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0" target="_blank" rel="noopener">http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0</a><br><code>pip</code> 安装：<code>pip install beautifulsoup4</code><br><code>lxml</code> 只会局部遍历，而<code>Beautiful Soup</code> 是基于<code>HTML DOM</code>的，会载入整个文档，解析整个<code>DOM</code>树，因此时间和内存开销都会大很多，所以性能要低于<code>lxml</code>。</p>
 <table><thead><tr><th style="text-align:center">抓取工具</th><th style="text-align:center">速度</th><th style="text-align:center">使用难度</th><th style="text-align:center">安装难度</th></tr></thead><tbody><tr><td style="text-align:center">正则</td><td style="text-align:center">最快</td><td style="text-align:center">困难</td><td style="text-align:center">无（内置）</td></tr><tr><td style="text-align:center">BeautifulSoup</td><td style="text-align:center">慢</td><td style="text-align:center">最简单</td><td style="text-align:center">简单</td></tr><tr><td style="text-align:center">lxml</td><td style="text-align:center">快</td><td style="text-align:center">简单</td><td style="text-align:center">一般</td></tr></tbody></table>
-### 常见的文档树处理函数
-Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象。
-* 常见的标签处理：Tag
-Tag 通俗点讲就是 HTML 中的一个个标签。但是注意，**它查找的是在所有内容中的第一个符合要求的标签。** 
-还有值得注意的是：**对于 Tag，它有两个重要的属性，是 name 和 attrs**
-看看下面的例子：
-``` python
-from bs4 import BeautifulSoup
 
-<p>content = “””</p>
-<ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul>
-"""
-
-<p>soup = BeautifulSoup(content, features=”html.parser”)<br>li = soup.li<br>print(li)   # <li class="item-0"><a href="link1.html">壹 item</a></li><br>print(type(li))  # &lt;class ‘bs4.element.Tag’&gt;</p>
-<h1 id="两个属性"><a href="#两个属性" class="headerlink" title="两个属性"></a>两个属性</h1><p>print(li.name)   # li<br>print(li.attrs)   # {‘class’: [‘item-0’]}</p>
-<pre><code>
-* 获取标签文本域内容
-获取标签内部的文字对象。有三种方式，看看下面简单的例子：
-``` python
-from bs4 import BeautifulSoup
-
-content = &quot;&quot;&quot;
-&lt;ul&gt;&lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;壹 item&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;item-1&quot;&gt;&lt;a href=&quot;link2.html&quot;&gt;贰 item&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-&quot;&quot;&quot;
-
-soup = BeautifulSoup(content, features=&quot;html.parser&quot;)
-li = soup.li
-print(li)   # &lt;li class=&quot;item-0&quot;&gt;&lt;a href=&quot;link1.html&quot;&gt;壹 item&lt;/a&gt;&lt;/li&gt;
-# print(li.next_siblings)  # li
-
-# 获取文本节点
-print(li.string)   # 壹 item
-print(li.text)   # 壹 item
-print(li.get_text())  # 壹 item</code></pre><ul>
-<li>find-搜索文档树<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-</code></pre>
-</li>
+<h3 id="常见的文档树处理函数"><a href="#常见的文档树处理函数" class="headerlink" title="常见的文档树处理函数"></a>常见的文档树处理函数</h3><p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象。</p>
+<ul>
+<li>常见的标签处理：Tag<br>Tag 通俗点讲就是 HTML 中的一个个标签。但是注意，<strong>它查找的是在所有内容中的第一个符合要求的标签。</strong><br>还有值得注意的是：<strong>对于 Tag，它有两个重要的属性，是 name 和 attrs</strong><br>看看下面的例子：</li>
 </ul>
-<p>content = “””</p>
-<ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul>
-"""
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+content <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+&lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>
+"""</span>
 
-<p>soup = BeautifulSoup(content, features=”html.parser”)<br>print(type(soup))   # &lt;class ‘bs4.BeautifulSoup’&gt;</p>
-<h1 id="find-匹配第一个满足的"><a href="#find-匹配第一个满足的" class="headerlink" title="find  匹配第一个满足的"></a>find  匹配第一个满足的</h1><p>li = soup.find(name=’li’)   # <li class="item-0"><a href="link1.html">壹 item</a></li></p>
-<h1 id="find-all-匹配所有，返回列表集"><a href="#find-all-匹配所有，返回列表集" class="headerlink" title="find_all   匹配所有，返回列表集"></a>find_all   匹配所有，返回列表集</h1><p>li_list = soup.find_all(name=’li’)  # [<li class="item-0"><a href="link1.html">壹 item</a></li>, <li class="item-1"><a href="link2.html">贰 item</a></li>]</p>
-<h1 id="find-next-在当前标签向后查找给定的标签，匹配第一个"><a href="#find-next-在当前标签向后查找给定的标签，匹配第一个" class="headerlink" title="find_next 在当前标签向后查找给定的标签，匹配第一个"></a>find_next 在当前标签向后查找给定的标签，匹配第一个</h1><p>li = soup.find(name=’li’)<br>next_li = li.find_next(‘li’)  # <li class="item-1"><a href="link2.html">贰 item</a></li><br>next_a = li.find_next(‘a’)   # <a href="link1.html">壹 item</a></p>
-<h1 id="find-all-next-在当前标签向后查找给定的标签，匹配所有"><a href="#find-all-next-在当前标签向后查找给定的标签，匹配所有" class="headerlink" title="find_all_next  在当前标签向后查找给定的标签，匹配所有"></a>find_all_next  在当前标签向后查找给定的标签，匹配所有</h1><p>ul = soup.ul<br>a_list = ul.find_all_next(‘a’)  # [<a href="link1.html">壹 item</a>, <a href="link2.html">贰 item</a>]</p>
-<h1 id="find-previous-在当前标签向前查找给定的标签，匹配首个"><a href="#find-previous-在当前标签向前查找给定的标签，匹配首个" class="headerlink" title="find_previous 在当前标签向前查找给定的标签，匹配首个"></a>find_previous 在当前标签向前查找给定的标签，匹配首个</h1><p>last_a = a_list[1]   # <a href="link2.html">贰 item</a><br>li = last_a.find_previous(‘li’)  # <li class="item-1"><a href="link2.html">贰 item</a></li><br>a = last_a.find_previous(‘a’)  # <a href="link1.html">壹 item</a></p>
-<h1 id="find-all-previous-在当前标签向前查找给定的标签，匹配所有"><a href="#find-all-previous-在当前标签向前查找给定的标签，匹配所有" class="headerlink" title="find_all_previous  在当前标签向前查找给定的标签，匹配所有"></a>find_all_previous  在当前标签向前查找给定的标签，匹配所有</h1><p>li_list = last_a.find_all_previous(‘li’)  # [<li class="item-1"><a href="link2.html">贰 item</a></li>, <li class="item-0"><a href="link1.html">壹 item</a></li>]<br>a_list = last_a.find_all_previous(‘a’)  # [<a href="link1.html">壹 item</a>]</p>
-<h1 id="find-parent-name默认None-返回直接父辈元素。写name可以是上上级，就返回上上级父元素标签"><a href="#find-parent-name默认None-返回直接父辈元素。写name可以是上上级，就返回上上级父元素标签" class="headerlink" title="find_parent  name默认None,返回直接父辈元素。写name可以是上上级，就返回上上级父元素标签"></a>find_parent  name默认None,返回直接父辈元素。写name可以是上上级，就返回上上级父元素标签</h1><p>li = last_a.find_parent() # 直接父元素 <li class="item-1"><a href="link2.html">贰 item</a></li><br>ul = last_a.find_parent(‘ul’) # 指定父元素 <ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul></p>
-<h1 id="find-parents"><a href="#find-parents" class="headerlink" title="find_parents"></a>find_parents</h1><p>parents = last_a.find_parents() # 直接父元素 和上层所有父辈元素</p>
-<h1 id="贰-item-壹-item贰-item"><a href="#贰-item-壹-item贰-item" class="headerlink" title="[贰 item, 壹 item贰 item,"></a>[<li class="item-1"><a href="link2.html">贰 item</a></li>, <ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul>,</h1><h1 id="壹-item贰-item"><a href="#壹-item贰-item" class="headerlink" title="壹 item贰 item,"></a><ul><li class="item-0"><a href="link1.html">壹 item</a></li><li class="item-1"><a href="link2.html">贰 item</a></li></ul>,</h1><h1 id><a href="#" class="headerlink" title="]"></a>]</h1><h1 id="下面四个方法是兄弟元素的相关方法，不演示了。"><a href="#下面四个方法是兄弟元素的相关方法，不演示了。" class="headerlink" title="下面四个方法是兄弟元素的相关方法，不演示了。"></a>下面四个方法是兄弟元素的相关方法，不演示了。</h1><h1 id="‘find-next-sibling’-‘find-next-siblings’"><a href="#‘find-next-sibling’-‘find-next-siblings’" class="headerlink" title="‘find_next_sibling’, ‘find_next_siblings’"></a>‘find_next_sibling’, ‘find_next_siblings’</h1><h1 id="‘find-previous-sibling’-‘find-previous-siblings’"><a href="#‘find-previous-sibling’-‘find-previous-siblings’" class="headerlink" title="‘find_previous_sibling’, ‘find_previous_siblings’,"></a>‘find_previous_sibling’, ‘find_previous_siblings’,</h1><pre><code>
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>content<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+li <span class="token operator">=</span> soup<span class="token punctuation">.</span>li
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li></span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># &lt;class 'bs4.element.Tag'></span>
 
-### select方法-按照CSS选择器查找
-不妨看一个简单的案例：
-``` python
-from bs4 import BeautifulSoup
+<span class="token comment" spellcheck="true"># 两个属性</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">.</span>name<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># li</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">.</span>attrs<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># {'class': ['item-0']}</span></code></pre>
+<ul>
+<li>获取标签文本域内容<br>获取标签内部的文字对象。有三种方式，看看下面简单的例子：</li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
 
-body = &quot;&quot;&quot;
-&lt;ul&gt;
-&lt;li class=&#39;s&#39;&gt;1 2 3&lt;/li&gt;
-&lt;li id=&#39;t&#39;&gt;one two three&lt;/li&gt;
-&lt;li&gt;壹 贰 叁&lt;/li&gt;
-&lt;li&gt;一 二 三&lt;/li&gt;
-&lt;/ul&gt;
-&quot;&quot;&quot;
+content <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+&lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>
+"""</span>
 
-soup = BeautifulSoup(body, features=&#39;html.parser&#39;)
-# 标签选择器，直接使用名字
-print(soup.select(&#39;ul&#39;))   # [&lt;ul&gt;...&lt;/ul&gt;]
-# 类选择器
-print(soup.select(&#39;ul li.s&#39;))   # [&lt;li class=&quot;s&quot;&gt;1 2 3&lt;/li&gt;]
-# id选择器
-print(soup.select(&#39;li#t&#39;))   # [&lt;li id=&quot;t&quot;&gt;one two three&lt;/li&gt;]
-# 子元素选择器 &gt;
-print(soup.select(&#39;ul &gt; li&#39;))  # [&lt;li class=&quot;s&quot;&gt;1 2 3&lt;/li&gt;, &lt;li id=&quot;t&quot;&gt;one two three&lt;/li&gt;, &lt;li&gt;壹 贰 叁&lt;/li&gt;, &lt;li&gt;一 二 三&lt;/li&gt;]</code></pre><p>不妨看看本网站关于<a href="/2019/css-2/">CSS选择器的教程</a></p>
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>content<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+li <span class="token operator">=</span> soup<span class="token punctuation">.</span>li
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li></span>
+<span class="token comment" spellcheck="true"># print(li.next_siblings)  # li</span>
+
+<span class="token comment" spellcheck="true"># 获取文本节点</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">.</span>string<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># 壹 item</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">.</span>text<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># 壹 item</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>li<span class="token punctuation">.</span>get_text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 壹 item</span></code></pre>
+<ul>
+<li>find-搜索文档树</li>
+</ul>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+
+content <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+&lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>
+"""</span>
+
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>content<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">"html.parser"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>soup<span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;class 'bs4.BeautifulSoup'></span>
+
+<span class="token comment" spellcheck="true"># find  匹配第一个满足的</span>
+li <span class="token operator">=</span> soup<span class="token punctuation">.</span>find<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'li'</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li></span>
+
+<span class="token comment" spellcheck="true"># find_all   匹配所有，返回列表集</span>
+li_list <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'li'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>, &lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>]</span>
+
+<span class="token comment" spellcheck="true"># find_next 在当前标签向后查找给定的标签，匹配第一个</span>
+li <span class="token operator">=</span> soup<span class="token punctuation">.</span>find<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'li'</span><span class="token punctuation">)</span>
+next_li <span class="token operator">=</span> li<span class="token punctuation">.</span>find_next<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># &lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li></span>
+next_a <span class="token operator">=</span> li<span class="token punctuation">.</span>find_next<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;a href="link1.html">壹 item&lt;/a></span>
+
+<span class="token comment" spellcheck="true"># find_all_next  在当前标签向后查找给定的标签，匹配所有</span>
+ul <span class="token operator">=</span> soup<span class="token punctuation">.</span>ul
+a_list <span class="token operator">=</span> ul<span class="token punctuation">.</span>find_all_next<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [&lt;a href="link1.html">壹 item&lt;/a>, &lt;a href="link2.html">贰 item&lt;/a>]</span>
+
+<span class="token comment" spellcheck="true"># find_previous 在当前标签向前查找给定的标签，匹配首个</span>
+last_a <span class="token operator">=</span> a_list<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>   <span class="token comment" spellcheck="true"># &lt;a href="link2.html">贰 item&lt;/a></span>
+li <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_previous<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># &lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li></span>
+a <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_previous<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># &lt;a href="link1.html">壹 item&lt;/a></span>
+
+<span class="token comment" spellcheck="true"># find_all_previous  在当前标签向前查找给定的标签，匹配所有</span>
+li_list <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_all_previous<span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>, &lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>]</span>
+a_list <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_all_previous<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [&lt;a href="link1.html">壹 item&lt;/a>]</span>
+
+<span class="token comment" spellcheck="true"># find_parent  name默认None,返回直接父辈元素。写name可以是上上级，就返回上上级父元素标签</span>
+li <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_parent<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 直接父元素 &lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li></span>
+ul <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_parent<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 指定父元素 &lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul></span>
+
+<span class="token comment" spellcheck="true"># find_parents</span>
+parents <span class="token operator">=</span> last_a<span class="token punctuation">.</span>find_parents<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 直接父元素 和上层所有父辈元素</span>
+<span class="token comment" spellcheck="true"># [&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>, &lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>,</span>
+<span class="token comment" spellcheck="true"># &lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>,</span>
+<span class="token comment" spellcheck="true"># ]</span>
+
+<span class="token comment" spellcheck="true"># 下面四个方法是兄弟元素的相关方法，不演示了。</span>
+<span class="token comment" spellcheck="true">#  'find_next_sibling', 'find_next_siblings'</span>
+<span class="token comment" spellcheck="true">#  'find_previous_sibling', 'find_previous_siblings',</span></code></pre>
+<h3 id="select方法-按照CSS选择器查找"><a href="#select方法-按照CSS选择器查找" class="headerlink" title="select方法-按照CSS选择器查找"></a>select方法-按照CSS选择器查找</h3><p>不妨看一个简单的案例：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+
+body <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+&lt;ul>
+&lt;li class='s'>1 2 3&lt;/li>
+&lt;li id='t'>one two three&lt;/li>
+&lt;li>壹 贰 叁&lt;/li>
+&lt;li>一 二 三&lt;/li>
+&lt;/ul>
+"""</span>
+
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>body<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">'html.parser'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 标签选择器，直接使用名字</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">'ul'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># [&lt;ul>...&lt;/ul>]</span>
+<span class="token comment" spellcheck="true"># 类选择器</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">'ul li.s'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># [&lt;li class="s">1 2 3&lt;/li>]</span>
+<span class="token comment" spellcheck="true"># id选择器</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">'li#t'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   # <span class="token punctuation">[</span><span class="token operator">&lt;</span>li id<span class="token operator">=</span><span class="token string">"t"</span><span class="token operator">></span>one two three<span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># 子元素选择器 ></span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">'ul > li'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [&lt;li class="s">1 2 3&lt;/li>, &lt;li id="t">one two three&lt;/li>, &lt;li>壹 贰 叁&lt;/li>, &lt;li>一 二 三&lt;/li>]</span></code></pre>
+<p>不妨看看本网站关于<a href="/2019/css-2/">CSS选择器的教程</a></p>
 <h3 id="按照属性查找"><a href="#按照属性查找" class="headerlink" title="按照属性查找"></a>按照属性查找</h3><p>当然，标签中可能有其他的属性，我们可以按照属性查找：</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
 
@@ -1183,24 +1430,26 @@ resu <span class="token operator">=</span> soup<span class="token punctuation">.
 <li>JSON false  ==&gt; Python False</li>
 <li>JSON null  ==&gt; Python None</li>
 </ul>
-<h2 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h2><p>import  json<br>jstr = ‘{“city”: “北京”, “name”: “大猫”}’</p>
-<p>print(type(json.loads(jstr)))   # &lt;class ‘dict’&gt;<br>print(json.loads(jstr)) # {‘city’: ‘北京’, ‘name’: ‘大猫’}</p>
-<pre><code>
-2. `dumps`
-把一个`Python`对象编码转换成Json字符串，返回一个`str`对象。
-转换的规则，刚好和上面的相反。
-``` python 
-import  json
+<h2 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span>  json
+jstr <span class="token operator">=</span> <span class="token string">'{"city": "北京", "name": "大猫"}'</span>
 
-jstr = {&quot;city&quot;: &quot;北京&quot;, &quot;name&quot;: &quot;大猫&quot;}
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>jstr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;class 'dict'></span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>jstr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {'city': '北京', 'name': '大猫'}</span></code></pre>
+<ol start="2">
+<li><code>dumps</code><br>把一个<code>Python</code>对象编码转换成Json字符串，返回一个<code>str</code>对象。<br>转换的规则，刚好和上面的相反。</li>
+</ol>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span>  json
 
-print(type(json.dumps(jstr)))   # &lt;class &#39;str&#39;&gt;
-print(json.dumps(jstr)) # {&quot;city&quot;: &quot;\u5317\u4eac&quot;, &quot;name&quot;: &quot;\u5927\u732b&quot;}
+jstr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"city"</span><span class="token punctuation">:</span> <span class="token string">"北京"</span><span class="token punctuation">,</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"大猫"</span><span class="token punctuation">}</span>
 
-# json.dumps() 序列化时默认使用的ascii编码
-# 添加参数 ensure_ascii=False 禁用ascii编码，按utf-8编码
-print(type(json.dumps(jstr, ensure_ascii=False)))   # &lt;class &#39;str&#39;&gt;
-print(json.dumps(jstr, ensure_ascii=False)) # {&quot;city&quot;: &quot;北京&quot;, &quot;name&quot;: &quot;大猫&quot;}</code></pre><p>另外的<code>dump</code>、<code>load</code>就不介绍了，是操作文件的。下面就介绍解析<code>JSON</code>文件的<code>JsonPath</code></p>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>jstr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;class 'str'></span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>jstr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {"city": "\u5317\u4eac", "name": "\u5927\u732b"}</span>
+
+<span class="token comment" spellcheck="true"># json.dumps() 序列化时默认使用的ascii编码</span>
+<span class="token comment" spellcheck="true"># 添加参数 ensure_ascii=False 禁用ascii编码，按utf-8编码</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>jstr<span class="token punctuation">,</span> ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># &lt;class 'str'></span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>jstr<span class="token punctuation">,</span> ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># {"city": "北京", "name": "大猫"}</span></code></pre>
+<p>另外的<code>dump</code>、<code>load</code>就不介绍了，是操作文件的。下面就介绍解析<code>JSON</code>文件的<code>JsonPath</code></p>
 <h3 id="JsonPath"><a href="#JsonPath" class="headerlink" title="JsonPath"></a>JsonPath</h3><p><code>JsonPath</code> 是一种信息抽取类库，是从<code>JSON</code>文档中抽取指定信息的工具，提供多种语言实现版本，包括：<code>Javascript</code>, <code>Python</code>， <code>PHP</code> 和 <code>Java</code>。<br>下载地址：<a href="https://pypi.python.org/pypi/jsonpath" target="_blank" rel="noopener">https://pypi.python.org/pypi/jsonpath</a><br>安装方法：点击<code>Download URL</code>链接下载<code>jsonpath</code>，解压之后执行<code>python setup.py install</code><br>官方文档：<a href="http://goessner.net/articles/JsonPath" target="_blank" rel="noopener">http://goessner.net/articles/JsonPath</a><br>由于我使用的是<code>Pycharm</code>工具，比较方便，直接设置中安装就可以了。<br><code>JsonPath</code>与<code>XPath</code>语法对比：</p>
 <table><thead><tr><th style="text-align:center">XPath</th><th>JSONPath</th><th>描述</th></tr></thead><tbody><tr><td style="text-align:center"><code>/</code></td><td><code>$</code></td><td>根节点</td></tr><tr><td style="text-align:center"><code>.</code></td><td><code>@</code></td><td>现行节点</td></tr><tr><td style="text-align:center"><code>/</code></td><td><code>.</code>or<code>[]</code></td><td>取子节点</td></tr><tr><td style="text-align:center"><code>..</code></td><td>n/a</td><td>取父节点，Jsonpath未支持</td></tr><tr><td style="text-align:center"><code>//</code></td><td><code>..</code></td><td>就是不管位置，选择所有符合条件的条件</td></tr><tr><td style="text-align:center"><code>\*</code></td><td><code>\*</code></td><td>匹配所有元素节点</td></tr><tr><td style="text-align:center"><code>@</code></td><td>n/a</td><td>根据属性访问，Json不支持，因为Json是个Key-value递归结构，不需要。</td></tr><tr><td style="text-align:center"><code>[]</code></td><td><code>[]</code></td><td>迭代器标示（可以在里边做简单的迭代操作，如数组下标，根据内容选值等）</td></tr><tr><td style="text-align:center">|</td><td><code>[,]</code></td><td>支持迭代器中做多选。</td></tr><tr><td style="text-align:center"><code>[]</code></td><td><code>?()</code></td><td>支持过滤操作.</td></tr><tr><td style="text-align:center">n/a</td><td><code>()</code></td><td>支持表达式计算</td></tr><tr><td style="text-align:center"><code>()</code></td><td>n/a</td><td>分组，JsonPath不支持</td></tr></tbody></table>
 
@@ -1475,29 +1724,26 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/06/scrapy-2/">
+                <a href="/2019/06/scrapy-1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="scrapy-2 |  第一个爬虫程序">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="scrapy-1 |  安装scrapy">
                         
-                        <span class="card-title">scrapy-2 |  第一个爬虫程序</span>
+                        <span class="card-title">scrapy-1 |  安装scrapy</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            安装完成了，接下来，我们开始写程序。
-#1 查看帮助
-    scrapy -h
-    scrapy  -h
-#2 有两种命令：其中Project-only必须切到项目文件夹下才能执行，而Global的命令则不需要
-    Global 
+                            决定系统化的学习爬虫，使用Python实现。以下内容来自博客园、CSDN等。非原创。
+1、安装wheel（安装后，便支持通过wheel文件安装软件）pip3 install wheel
+2、安装lxml、pyopenssllxml：解析XM
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-05
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-04
                         </span>
                         <span class="publish-author">
                             
@@ -1529,33 +1775,33 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/06/scrapy-1/">
+                <a href="/2019/06/leetcode-922/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="scrapy-1 |  安装scrapy">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="leetcode-922 | 按奇偶排序数组 II">
                         
-                        <span class="card-title">scrapy-1 |  安装scrapy</span>
+                        <span class="card-title">leetcode-922 | 按奇偶排序数组 II</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            决定系统化的学习爬虫，使用Python实现。以下内容来自博客园、CSDN等。非原创。
-1、安装wheel（安装后，便支持通过wheel文件安装软件）pip3 install wheel
-2、安装lxml、pyopenssllxml：解析XM
+                            922. 按奇偶排序数组 II给定一个非负整数数组 A， A 中一半整数是奇数，一半整数是偶数。
+对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时， i 也是偶数。
+你可以返回任何满足上述条件的数组作为答案。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/scrapy/" class="post-category" target="_blank">
-                                    scrapy
+                            <a href="/categories/leetcode/" class="post-category" target="_blank">
+                                    leetcode
                                 </a>
                             
                             
@@ -1565,8 +1811,12 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/scrapy/" target="_blank">
-                        <span class="chip bg-color">scrapy</span>
+                    <a href="/tags/leetcode-简单难度/" target="_blank">
+                        <span class="chip bg-color">leetcode 简单难度</span>
+                    </a>
+                    
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
                     </a>
                     
                 </div>
@@ -1724,7 +1974,7 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">105k</span>
+                <span class="white-color">105.8k</span>
             
 
             
