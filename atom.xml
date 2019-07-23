@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>无涯明月</title>
+  
+  <subtitle>Where there is a will,there is a way.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://baiyazi.top/"/>
+  <updated>2019-07-23T02:03:59.429Z</updated>
+  <id>http://baiyazi.top/</id>
+  
+  <author>
+    <name>无涯明月</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo主题推荐</title>
+    <link href="http://baiyazi.top/2019/07/usehexo-10/"/>
+    <id>http://baiyazi.top/2019/07/usehexo-10/</id>
+    <published>2019-07-22T14:53:44.000Z</published>
+    <updated>2019-07-23T02:03:59.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前段时间电脑键盘用着莫名的无效了，加上自己的C盘已经快满了，就想着重装一个系统，瘦瘦身。&lt;br&gt;由于昨天重新安装了系统，hexo博客感觉next的主题也不是那么好看了。于是想着重找一个。下面推荐几款自己感觉比较好看的主题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;主题：Melody
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo主题" scheme="http://baiyazi.top/categories/Hexo%E4%B8%BB%E9%A2%98/"/>
+    
+    
+      <category term="hexo" scheme="http://baiyazi.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-模板文件  中等难度</title>
+    <link href="http://baiyazi.top/2019/07/leetcode-fu-ben/"/>
+    <id>http://baiyazi.top/2019/07/leetcode-fu-ben/</id>
+    <published>2019-07-22T09:35:15.206Z</published>
+    <updated>2019-07-23T01:13:24.324Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;span&gt;示例 1：&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://baiyazi.top/categories/leetcode/"/>
+    
+    
+      <category term="leetcode 中等难度" scheme="http://baiyazi.top/tags/leetcode-%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"/>
+    
+      <category term="链表" scheme="http://baiyazi.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-53 | 最大子序和</title>
+    <link href="http://baiyazi.top/2019/07/leetcode-53/"/>
+    <id>http://baiyazi.top/2019/07/leetcode-53/</id>
+    <published>2019-07-22T09:35:15.067Z</published>
+    <updated>2019-07-23T01:26:48.404Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个整数数组 nums
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://baiyazi.top/categories/leetcode/"/>
+    
+    
+      <category term="leetcode 简单难度" scheme="http://baiyazi.top/tags/leetcode-%E7%AE%80%E5%8D%95%E9%9A%BE%E5%BA%A6/"/>
+    
+      <category term="数组" scheme="http://baiyazi.top/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 云数据库更新异常</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-9/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-9/</id>
+    <published>2019-07-20T19:30:27.000Z</published>
+    <updated>2019-07-22T10:02:32.598Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 使用update的时候，出现了错误：stats:&lt;br&gt;也即是数据根本没有更新。寻寻觅觅……(参考地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 绘制折线图【一】【转】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-7/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-7/</id>
+    <published>2019-07-19T11:50:15.000Z</published>
+    <updated>2019-07-22T09:59:18.972Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 简单了解一下绘制折线图&lt;/p&gt;
+&lt;p&gt;官网地址：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 绘制折线图【二】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-8/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-8/</id>
+    <published>2019-07-19T11:50:15.000Z</published>
+    <updated>2019-07-22T10:03:37.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 前面看了几个插件应用的效果，这里还是专门看看折线图&lt;br&gt;官网地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 分装组件【日历】二</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-6/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-6/</id>
+    <published>2019-07-12T12:03:00.000Z</published>
+    <updated>2019-07-22T09:59:05.593Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;上一节提到了比较多的问题没有解决，这里就开始对不合理的数据进行在改造&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 分装组件【日历】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-5/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-5/</id>
+    <published>2019-07-07T10:07:11.000Z</published>
+    <updated>2019-07-22T09:58:49.690Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 有了前面的分装对话框，接下来分装一个日历相比是要复杂一些，接着就来试试。&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 分装组件【窗口对话框】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-4/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-4/</id>
+    <published>2019-07-07T10:07:11.000Z</published>
+    <updated>2019-07-22T09:58:30.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 前端，很多时候都需要一些组件，然而实际没有直接提供，我们就需要自己封转。&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Reflective Notes</title>
+    <link href="http://baiyazi.top/2019/06/introspection/"/>
+    <id>http://baiyazi.top/2019/06/introspection/</id>
+    <published>2019-06-18T17:22:54.000Z</published>
+    <updated>2019-07-23T01:20:11.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;title&quot;&gt;可怜虫-可怜之人必有可恨之处&lt;/div&gt;        &lt;div class=&quot;sub-title&quot;&gt;总是不知悔改，总是自以为是，到头来除了证明别人是对你+自己是错的，还能证明什么？&lt;/div&gt;            &lt;div
+        
+      
+    
+    </summary>
+    
+      <category term="introspection" scheme="http://baiyazi.top/categories/introspection/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo官网阅读笔记 | 来必力</title>
+    <link href="http://baiyazi.top/2019/06/usehexo-9/"/>
+    <id>http://baiyazi.top/2019/06/usehexo-9/</id>
+    <published>2019-06-14T19:23:15.000Z</published>
+    <updated>2019-07-23T01:45:23.231Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-不要渲染帖子&quot;&gt;&lt;a href=&quot;#1-不要渲染帖子&quot; class=&quot;headerlink&quot; title=&quot;1. 不要渲染帖子&quot;&gt;&lt;/a&gt;1. 不要渲染帖子&lt;/h1&gt;&lt;p&gt;如果您不希望处理您的帖子，可以&lt;code&gt;layout:
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo教程" scheme="http://baiyazi.top/categories/Hexo%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="http://baiyazi.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>seo-7 |  用Item数据封装</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-8/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-8/</id>
+    <published>2019-06-09T16:45:26.000Z</published>
+    <updated>2019-07-22T09:50:08.395Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;学习了&lt;code&gt;xpath&lt;/code&gt;和&lt;code&gt;css&lt;/code&gt;，我们就可以很容易的从下载的网页中提取出我们想要的数据内容了。数据较多的时候，自然而然就想到了使用字典、列表来封装数据。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Scrapy&lt;/code&gt;中提供了&lt;code&gt;It
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-7 |  Response内置CSS选择器</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-7/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-7/</id>
+    <published>2019-06-09T15:31:11.000Z</published>
+    <updated>2019-07-22T09:49:57.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;和&lt;code&gt;xpath&lt;/code&gt;类似，&lt;code&gt;CSS&lt;/code&gt;在&lt;code&gt;Response&lt;/code&gt;中也集成了。CSS选择器的语法更加简单，但是功能不如xpath强大。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CSS&lt;/code&gt;即层叠样式表。&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-6 |  Response内置XPath选择器</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-6/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-6/</id>
+    <published>2019-06-07T08:55:20.000Z</published>
+    <updated>2019-07-23T01:39:50.667Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;和Selector类似，为了方便用户编码操作，&lt;code&gt;XPath&lt;/code&gt;在&lt;code&gt;Response&lt;/code&gt;中也集成了。&lt;br&gt;&lt;code&gt;Xpath（XML Path
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-5 |  Response内置Selector</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-5/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-5/</id>
+    <published>2019-06-06T09:50:50.000Z</published>
+    <updated>2019-07-22T09:49:26.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前面大致介绍了Selector，但是在实际开发中，我们基本上都是不需要手动创建Selector对象的。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Response&lt;/code&gt;对象的&lt;code&gt;selector&lt;/code&gt;属性被第一次访问时，&lt;code&gt;Response&lt;/code&gt;对象
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-4 |  Selector提取数据</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-4/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-4/</id>
+    <published>2019-06-06T08:42:10.000Z</published>
+    <updated>2019-07-22T09:49:14.884Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;数据处理&lt;/p&gt;
+&lt;p&gt;Python中常用的处理HTTP解析库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BeautifulSoup&lt;br&gt;很流行的HTTP解析库，API简洁易用，但是解析速度比较慢。&lt;/li&gt;
+&lt;li&gt;lxml&lt;br&gt;由C语言编写的xml解析库，API相对复杂，解析速度
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-3 |  Spider开发流程</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-3/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-3/</id>
+    <published>2019-06-05T17:46:10.000Z</published>
+    <updated>2019-07-22T09:48:56.396Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;感觉还差点东西，觉得流程这个东西需要搞出来。&lt;br&gt;说Spider开发的流程，这里就不得不提一下爬虫的执行流程和Scrapy框架的工作原理。如下：&lt;/p&gt;
+&lt;h1 id=&quot;爬虫的执行流程&quot;&gt;&lt;a href=&quot;#爬虫的执行流程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-2 |  第一个爬虫程序</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-2/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-2/</id>
+    <published>2019-06-05T08:43:33.000Z</published>
+    <updated>2019-07-22T09:48:44.678Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;安装完成了，接下来，我们开始写程序。&lt;/p&gt;
+&lt;pre class=&quot; language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#1 查看帮助
+    scrapy -h
+    scrapy &lt;command&gt; -h
+#2
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-0 |  Python爬虫基础</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-0/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-0/</id>
+    <published>2019-06-04T20:40:49.000Z</published>
+    <updated>2019-07-22T09:48:02.004Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;感觉学习&lt;code&gt;Scrapy&lt;/code&gt;之前，应该是爬虫的基础类库。毕竟&lt;code&gt;Scrapy&lt;/code&gt;是框架，学习框架之前应该弄熟练基础的类库的使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1-数据来源：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="爬虫初识" scheme="http://baiyazi.top/tags/%E7%88%AC%E8%99%AB%E5%88%9D%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>scrapy-1 |  安装scrapy</title>
+    <link href="http://baiyazi.top/2019/06/scrapy-1/"/>
+    <id>http://baiyazi.top/2019/06/scrapy-1/</id>
+    <published>2019-06-04T20:40:49.000Z</published>
+    <updated>2019-07-22T09:48:15.181Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;决定系统化的学习爬虫，使用Python实现。以下内容来自博客园、CSDN等。非原创。&lt;/p&gt;
+&lt;h1 id=&quot;1、安装wheel（安装后，便支持通过wheel文件安装软件）&quot;&gt;&lt;a href=&quot;#1、安装wheel（安装后，便支持通过wheel文件安装软件）&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="scrapy" scheme="http://baiyazi.top/categories/scrapy/"/>
+    
+    
+      <category term="scrapy" scheme="http://baiyazi.top/tags/scrapy/"/>
+    
+  </entry>
+  
+</feed>
