@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiyazi.top/"/>
-  <updated>2019-07-23T02:03:59.429Z</updated>
+  <updated>2019-07-23T06:47:45.516Z</updated>
   <id>http://baiyazi.top/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hexo主题推荐</title>
-    <link href="http://baiyazi.top/2019/07/usehexo-10/"/>
-    <id>http://baiyazi.top/2019/07/usehexo-10/</id>
-    <published>2019-07-22T14:53:44.000Z</published>
-    <updated>2019-07-23T02:03:59.429Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;前段时间电脑键盘用着莫名的无效了，加上自己的C盘已经快满了，就想着重装一个系统，瘦瘦身。&lt;br&gt;由于昨天重新安装了系统，hexo博客感觉next的主题也不是那么好看了。于是想着重找一个。下面推荐几款自己感觉比较好看的主题。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;主题：Melody
-        
-      
-    
-    </summary>
-    
-      <category term="Hexo主题" scheme="http://baiyazi.top/categories/Hexo%E4%B8%BB%E9%A2%98/"/>
-    
-    
-      <category term="hexo" scheme="http://baiyazi.top/tags/hexo/"/>
-    
-  </entry>
   
   <entry>
     <title>Hexo&#39;压缩&#39;代码</title>
@@ -74,6 +46,34 @@
     </summary>
     
       <category term="Hexo" scheme="http://baiyazi.top/categories/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://baiyazi.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo主题推荐</title>
+    <link href="http://baiyazi.top/2019/07/usehexo-10/"/>
+    <id>http://baiyazi.top/2019/07/usehexo-10/</id>
+    <published>2019-07-22T14:53:44.000Z</published>
+    <updated>2019-07-23T02:03:59.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前段时间电脑键盘用着莫名的无效了，加上自己的C盘已经快满了，就想着重装一个系统，瘦瘦身。&lt;br&gt;由于昨天重新安装了系统，hexo博客感觉next的主题也不是那么好看了。于是想着重找一个。下面推荐几款自己感觉比较好看的主题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;主题：Melody
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo主题" scheme="http://baiyazi.top/categories/Hexo%E4%B8%BB%E9%A2%98/"/>
     
     
       <category term="hexo" scheme="http://baiyazi.top/tags/hexo/"/>
@@ -166,6 +166,32 @@
   </entry>
   
   <entry>
+    <title>微信小程序开发 | 绘制折线图【二】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-8/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-8/</id>
+    <published>2019-07-19T11:50:15.000Z</published>
+    <updated>2019-07-22T10:03:37.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 前面看了几个插件应用的效果，这里还是专门看看折线图&lt;br&gt;官网地址：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>微信小程序开发 | 绘制折线图【一】【转】</title>
     <link href="http://baiyazi.top/2019/07/weixinprogram-7/"/>
     <id>http://baiyazi.top/2019/07/weixinprogram-7/</id>
@@ -180,32 +206,6 @@
         
           &lt;p&gt; 简单了解一下绘制折线图&lt;/p&gt;
 &lt;p&gt;官网地址：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序开发 | 绘制折线图【二】</title>
-    <link href="http://baiyazi.top/2019/07/weixinprogram-8/"/>
-    <id>http://baiyazi.top/2019/07/weixinprogram-8/</id>
-    <published>2019-07-19T11:50:15.000Z</published>
-    <updated>2019-07-22T10:03:37.400Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 前面看了几个插件应用的效果，这里还是专门看看折线图&lt;br&gt;官网地址：&lt;a
         
       
     
@@ -246,33 +246,6 @@
   </entry>
   
   <entry>
-    <title>微信小程序开发 | 分装组件【窗口对话框】</title>
-    <link href="http://baiyazi.top/2019/07/weixinprogram-4/"/>
-    <id>http://baiyazi.top/2019/07/weixinprogram-4/</id>
-    <published>2019-07-07T10:07:11.000Z</published>
-    <updated>2019-07-22T09:58:30.507Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; 前端，很多时候都需要一些组件，然而实际没有直接提供，我们就需要自己封转。&lt;/p&gt;
-&lt;p&gt;官方文档：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
-    
-  </entry>
-  
-  <entry>
     <title>微信小程序开发 | 分装组件【日历】</title>
     <link href="http://baiyazi.top/2019/07/weixinprogram-5/"/>
     <id>http://baiyazi.top/2019/07/weixinprogram-5/</id>
@@ -287,6 +260,33 @@
         
           &lt;p&gt;&lt;i class=&quot;fa  fa-bookmark fa-lg&quot;&gt;&lt;/i&gt; 有了前面的分装对话框，接下来分装一个日历相比是要复杂一些，接着就来试试。&lt;/p&gt;
 &lt;p&gt;官方文档：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://baiyazi.top/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="小程序代码构成" scheme="http://baiyazi.top/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%E6%9E%84%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发 | 分装组件【窗口对话框】</title>
+    <link href="http://baiyazi.top/2019/07/weixinprogram-4/"/>
+    <id>http://baiyazi.top/2019/07/weixinprogram-4/</id>
+    <published>2019-07-07T10:07:11.000Z</published>
+    <updated>2019-07-22T09:58:30.507Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 前端，很多时候都需要一些组件，然而实际没有直接提供，我们就需要自己封转。&lt;/p&gt;
+&lt;p&gt;官方文档：&lt;a href=&quot;https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/&quot;
         
       
     
