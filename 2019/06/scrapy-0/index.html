@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="scrapy-0 |  Python爬虫基础, weizu,无涯明月,weizu学习之路,营业执照办理">
+    <meta name="keywords" content="scrapy-0 |  Python爬虫基础 一, weizu,无涯明月,weizu学习之路,营业执照办理">
     <meta name="description" content="
 感觉学习Scrapy之前，应该是爬虫的基础类库。毕竟Scrapy是框架，学习框架之前应该弄熟练基础的类库的使用。
 
@@ -24,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>scrapy-0 |  Python爬虫基础 | 无涯明月</title>
+    <title>scrapy-0 |  Python爬虫基础 一 | 无涯明月</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -277,7 +277,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        scrapy-0 |  Python爬虫基础
+                        scrapy-0 |  Python爬虫基础 一
                     </div>
                 </div>
             </div>
@@ -976,21 +976,22 @@ resu <span class="token operator">=</span> partten<span class="token punctuation
 <span class="token keyword">import</span> re
 partten <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span>r<span class="token string">'(\w+) (\w+)'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># \w = [A-Za-z0-9]  按空格分为两组，每一组内容是单词字符（匹配\w）</span>
 s <span class="token operator">=</span> <span class="token string">'hello 123, hello 456'</span>
-</code></pre>
+<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">return</span> <span class="token string">'hi'</span> <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> m<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#分组，即分组中的第二个</span>
+resu <span class="token operator">=</span> partten<span class="token punctuation">.</span>sub<span class="token punctuation">(</span>func<span class="token punctuation">,</span> s<span class="token punctuation">)</span>    <span class="token comment" spellcheck="true"># 不指定替换的次数</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>resu<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># hi 123, hi 456</span>
+resu <span class="token operator">=</span> partten<span class="token punctuation">.</span>sub<span class="token punctuation">(</span>func<span class="token punctuation">,</span> s<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># 最多替换一次</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>resu<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># hi 123, hello 456</span></code></pre>
 </li>
 </ul>
-<p>def func(m):<br>    return ‘hi’ + ‘ ‘ + m.group(2)   #分组，即分组中的第二个</p>
-<p>resu = partten.sub(func, s)    # 不指定替换的次数<br>print(resu) # hi 123, hi 456<br>resu = partten.sub(func, s, 1)     # 最多替换一次<br>print(resu) # hi 123, hello 456</p>
-<pre><code>
-### 匹配中文
-中文的 unicode 编码范围 主要在 [u4e00-u9fa5]，这里说主要是因为这个范围并不完整，比如没有包括全角（中文）标点，不过，在大部分情况下，应该是够用的。
-``` python
-import re
-title = u&#39;你好，hello，世界&#39;
-pattern = re.compile(r&#39;[\u4e00-\u9fa5]+&#39;)
-result = pattern.findall(title)
+<h3 id="匹配中文"><a href="#匹配中文" class="headerlink" title="匹配中文"></a>匹配中文</h3><p>中文的 unicode 编码范围 主要在 [u4e00-u9fa5]，这里说主要是因为这个范围并不完整，比如没有包括全角（中文）标点，不过，在大部分情况下，应该是够用的。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> re
+title <span class="token operator">=</span> u<span class="token string">'你好，hello，世界'</span>
+pattern <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span>r<span class="token string">'[\u4e00-\u9fa5]+'</span><span class="token punctuation">)</span>
+result <span class="token operator">=</span> pattern<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>title<span class="token punctuation">)</span>
 
-print(result)   #[&#39;你好&#39;, &#39;世界&#39;]</code></pre><h3 id="爬虫中应用正则"><a href="#爬虫中应用正则" class="headerlink" title="爬虫中应用正则"></a>爬虫中应用正则</h3><p>如，我们这里想获取<a href="http://127.0.0.1：4000" target="_blank" rel="noopener">http://127.0.0.1：4000</a> 主页（地址也可以是本网站首页：<a href="http://baiyazi.top">http://baiyazi.top</a> ）的文章的标题。浏览器检查一下，然后和标题相关的代码如下：</p>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#['你好', '世界']</span></code></pre>
+<h3 id="爬虫中应用正则"><a href="#爬虫中应用正则" class="headerlink" title="爬虫中应用正则"></a>爬虫中应用正则</h3><p>如，我们这里想获取<a href="http://127.0.0.1：4000" target="_blank" rel="noopener">http://127.0.0.1：4000</a> 主页（地址也可以是本网站首页：<a href="http://baiyazi.top">http://baiyazi.top</a> ）的文章的标题。浏览器检查一下，然后和标题相关的代码如下：</p>
 <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post-title<span class="token punctuation">"</span></span> <span class="token attr-name">itemprop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name headline<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post-title-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/2019/usehexo-9/<span class="token punctuation">"</span></span> <span class="token attr-name">itemprop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hexo官网阅读笔记 | 来必力<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span></code></pre>
@@ -1270,11 +1271,13 @@ resu <span class="token operator">=</span> <span class="token punctuation">[</sp
 <p>然后，在<code>D</code>盘中就可以看见下载的两种图片。</p>
 <h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><p>和<code>lxml</code> 一样，<code>Beautiful Soup</code> 也是一个<code>HTML/XML</code>的解析器，主要的功能也是如何解析和提取 <code>HTML/XML</code> 数据。<br>官方文档：<a href="http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0" target="_blank" rel="noopener">http://beautifulsoup.readthedocs.io/zh_CN/v4.4.0</a><br><code>pip</code> 安装：<code>pip install beautifulsoup4</code><br><code>lxml</code> 只会局部遍历，而<code>Beautiful Soup</code> 是基于<code>HTML DOM</code>的，会载入整个文档，解析整个<code>DOM</code>树，因此时间和内存开销都会大很多，所以性能要低于<code>lxml</code>。</p>
 <table><thead><tr><th style="text-align:center">抓取工具</th><th style="text-align:center">速度</th><th style="text-align:center">使用难度</th><th style="text-align:center">安装难度</th></tr></thead><tbody><tr><td style="text-align:center">正则</td><td style="text-align:center">最快</td><td style="text-align:center">困难</td><td style="text-align:center">无（内置）</td></tr><tr><td style="text-align:center">BeautifulSoup</td><td style="text-align:center">慢</td><td style="text-align:center">最简单</td><td style="text-align:center">简单</td></tr><tr><td style="text-align:center">lxml</td><td style="text-align:center">快</td><td style="text-align:center">简单</td><td style="text-align:center">一般</td></tr></tbody></table>
+### 常见的文档树处理函数
+Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象。
+* 常见的标签处理：Tag
+Tag 通俗点讲就是 HTML 中的一个个标签。但是注意，**它查找的是在所有内容中的第一个符合要求的标签。** 
+还有值得注意的是：**对于 Tag，它有两个重要的属性，是 name 和 attrs**
+看看下面的例子：
 
-<h3 id="常见的文档树处理函数"><a href="#常见的文档树处理函数" class="headerlink" title="常见的文档树处理函数"></a>常见的文档树处理函数</h3><p>Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象。</p>
-<ul>
-<li>常见的标签处理：Tag<br>Tag 通俗点讲就是 HTML 中的一个个标签。但是注意，<strong>它查找的是在所有内容中的第一个符合要求的标签。</strong><br>还有值得注意的是：<strong>对于 Tag，它有两个重要的属性，是 name 和 attrs</strong><br>看看下面的例子：</li>
-</ul>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
 content <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
 &lt;ul>&lt;li class="item-0">&lt;a href="link1.html">壹 item&lt;/a>&lt;/li>&lt;li class="item-1">&lt;a href="link2.html">贰 item&lt;/a>&lt;/li>&lt;/ul>
@@ -1418,7 +1421,7 @@ resu <span class="token operator">=</span> soup<span class="token punctuation">.
 <span class="token comment" spellcheck="true"># resu[0].get_text()  </span></code></pre>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>和<code>xml</code>的地位不相上下，很厉害。<code>Json</code>在线解析网站：<a href="http://www.json.cn/#" target="_blank" rel="noopener">http://www.json.cn/#</a><br><code>json</code>简单说就是<code>javascript</code>中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构<br><code>json</code>模块提供了四个功能：<code>dumps</code>、<code>dump</code>、<code>loads</code>、<code>load</code>，用于字符串 和 <code>python</code>数据类型间进行转换。</p>
 <ol>
-<li><code>loads</code><br><code>Json</code>格式字符串解码转换成<code>Python</code>对象<br>``` python</li>
+<li><code>loads</code><br><code>Json</code>格式字符串解码转换成<code>Python</code>对象</li>
 </ol>
 <ul>
 <li>JSON object ==&gt; Python dict</li>
@@ -1678,7 +1681,7 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《scrapy-0 |  Python爬虫基础》
+                    《scrapy-0 |  Python爬虫基础 一》
                 </span> by
             <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/06/scrapy-0/" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1972,7 +1975,7 @@ articles <span class="token operator">=</span> html<span class="token punctuatio
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">105.8k</span>
+                <span class="white-color">130.6k</span>
             
 
             
