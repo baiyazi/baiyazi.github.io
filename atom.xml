@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baiyazi.top/"/>
-  <updated>2019-08-21T09:14:17.681Z</updated>
+  <updated>2019-09-08T10:36:38.089Z</updated>
   <id>http://baiyazi.top/</id>
   
   <author>
@@ -15,6 +15,268 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法基础</title>
+    <link href="http://baiyazi.top/2019/09/suan-fa-dao-lun-bi-ji-1/"/>
+    <id>http://baiyazi.top/2019/09/suan-fa-dao-lun-bi-ji-1/</id>
+    <published>2019-09-08T18:29:17.000Z</published>
+    <updated>2019-09-08T10:36:38.089Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="算法导论阅读笔记" scheme="http://baiyazi.top/categories/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="算法导论" scheme="http://baiyazi.top/tags/%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android | wifi</title>
+    <link href="http://baiyazi.top/2019/09/android-18/"/>
+    <id>http://baiyazi.top/2019/09/android-18/</id>
+    <published>2019-09-08T10:36:45.000Z</published>
+    <updated>2019-09-08T02:37:06.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
+    
+      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生记事本</title>
+    <link href="http://baiyazi.top/2019/09/xh-ld-1/"/>
+    <id>http://baiyazi.top/2019/09/xh-ld-1/</id>
+    <published>2019-09-07T19:04:08.000Z</published>
+    <updated>2019-09-09T08:28:34.483Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;日迹记事本&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="postgraduate" scheme="http://baiyazi.top/categories/postgraduate/"/>
+    
+    
+      <category term="postgraduate" scheme="http://baiyazi.top/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android | 广播</title>
+    <link href="http://baiyazi.top/2019/09/android-17/"/>
+    <id>http://baiyazi.top/2019/09/android-17/</id>
+    <published>2019-09-07T15:52:43.000Z</published>
+    <updated>2019-09-08T02:07:54.473Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;直接说案例：&lt;br&gt;布局文件：&lt;/p&gt;
+&lt;pre class=&quot; language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
+    
+      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android | 广播</title>
+    <link href="http://baiyazi.top/2019/08/android-16/"/>
+    <id>http://baiyazi.top/2019/08/android-16/</id>
+    <published>2019-08-29T16:03:34.000Z</published>
+    <updated>2019-09-07T08:01:12.838Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;BroadcastReceiver&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;广播：&lt;code&gt;Android
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
+    
+      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深思与反省</title>
+    <link href="http://baiyazi.top/2019/08/introspection-2/"/>
+    <id>http://baiyazi.top/2019/08/introspection-2/</id>
+    <published>2019-08-28T18:15:31.000Z</published>
+    <updated>2019-08-28T10:37:20.490Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;哎，看上篇反省就是上个月的明天，突然自己又很想写一篇来记录此时的感受。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;买菜的时候，翻了翻好几个月都不曾碰的微信朋友圈，然后就刷了一个月的动态。感觉很方，落寞感一下子就涌上了心头，看着别个的梦想和生活，谈不
+        
+      
+    
+    </summary>
+    
+      <category term="introspection" scheme="http://baiyazi.top/categories/introspection/"/>
+    
+    
+      <category term="反思" scheme="http://baiyazi.top/tags/%E5%8F%8D%E6%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android | xml文件解析</title>
+    <link href="http://baiyazi.top/2019/08/android-15/"/>
+    <id>http://baiyazi.top/2019/08/android-15/</id>
+    <published>2019-08-27T11:01:09.000Z</published>
+    <updated>2019-08-29T08:01:21.634Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;每种语言都有解析xml文档的插件包，在java中常见的有两种，Dom和SAX两种方式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
+    
+      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidAPI阅读不会单词</title>
+    <link href="http://baiyazi.top/2019/08/raw-words-1/"/>
+    <id>http://baiyazi.top/2019/08/raw-words-1/</id>
+    <published>2019-08-22T14:09:10.000Z</published>
+    <updated>2019-08-22T06:26:10.019Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;今天是2019年8月22日，过得太快了。还是争取好好学几天。&lt;br&gt;虽然在学Android的时候，经常做的就是百度看看，看别人的案例，但好像大佬都会自己看API。&lt;br&gt;终究是没有养成看API的习惯，所以要开始培养。&lt;/p&gt;
+&lt;/blockquot
+        
+      
+    
+    </summary>
+    
+      <category term="words" scheme="http://baiyazi.top/categories/words/"/>
+    
+    
+      <category term="words" scheme="http://baiyazi.top/tags/words/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>android | Content Provider初识</title>
+    <link href="http://baiyazi.top/2019/08/android-14/"/>
+    <id>http://baiyazi.top/2019/08/android-14/</id>
+    <published>2019-08-21T21:47:51.000Z</published>
+    <updated>2019-08-27T02:58:56.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;mars视频19集，讲解Content Provider，按照惯例先百度一下它是什么？有什么用？&lt;br&gt;其实，在android第一讲中也简略提到过：&lt;strong&gt;内容提供程序管理一组共享的应用数据。您可以将数据存储在文件系统、SQLite
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
+    
+      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
+    
+  </entry>
   
   <entry>
     <title>android | InputStream和Bitmap之间的相互转换</title>
@@ -339,271 +601,6 @@
       <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
     
       <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>android | `Activity`生命周期</title>
-    <link href="http://baiyazi.top/2019/08/android-2/"/>
-    <id>http://baiyazi.top/2019/08/android-2/</id>
-    <published>2019-08-09T16:23:22.000Z</published>
-    <updated>2019-08-09T10:08:48.598Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;还是上一节的文档中，我们找到&lt;code&gt;Activity&lt;/code&gt;部分的介绍，这里给出&lt;a href=&quot;https://developer.android.google.cn/guide/components/activities/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
-    
-      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>android | activity中Intent</title>
-    <link href="http://baiyazi.top/2019/08/android-1/"/>
-    <id>http://baiyazi.top/2019/08/android-1/</id>
-    <published>2019-08-09T09:25:10.000Z</published>
-    <updated>2019-08-09T08:24:09.343Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;主要涉及两点，如何启动&lt;code&gt;Activity&lt;/code&gt;；如何传递数据；&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;官方文档地址：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://baiyazi.top/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://baiyazi.top/tags/Android/"/>
-    
-      <category term="Eclipse" scheme="http://baiyazi.top/tags/Eclipse/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>flutter开发 | 二</title>
-    <link href="http://baiyazi.top/2019/08/flutter-2/"/>
-    <id>http://baiyazi.top/2019/08/flutter-2/</id>
-    <published>2019-08-04T17:28:54.000Z</published>
-    <updated>2019-08-09T01:22:32.852Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;安装完成了，然后找了找教程。看见了这样一句话：&lt;br&gt;&lt;code&gt;Dart&lt;/code&gt;是由谷歌开发的计算机编程语言,它可以被用于&lt;code&gt;web&lt;/code&gt;、服务器、移动应用
-        
-      
-    
-    </summary>
-    
-      <category term="flutter" scheme="http://baiyazi.top/categories/flutter/"/>
-    
-    
-      <category term="flutter" scheme="http://baiyazi.top/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>flutter开发 | 一</title>
-    <link href="http://baiyazi.top/2019/08/flutter-1/"/>
-    <id>http://baiyazi.top/2019/08/flutter-1/</id>
-    <published>2019-08-03T16:05:39.000Z</published>
-    <updated>2019-08-09T01:22:58.502Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;在大学接触过使用Java安装的eclipse集成开发环境来做apk。但是，还是感觉比较难，然后学习了一段时间就放弃了，当时也没有写博客的习惯，就完全忘记了。这两天想做一个VIP视频解析的apk，虽然网站已经有了。但是，广告还是比较多，所以想自己封装
-        
-      
-    
-    </summary>
-    
-      <category term="flutter" scheme="http://baiyazi.top/categories/flutter/"/>
-    
-    
-      <category term="flutter" scheme="http://baiyazi.top/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html5 | 网页播放器开发 一</title>
-    <link href="http://baiyazi.top/2019/07/html5videoplayer-1/"/>
-    <id>http://baiyazi.top/2019/07/html5videoplayer-1/</id>
-    <published>2019-07-29T16:37:11.000Z</published>
-    <updated>2019-07-30T07:01:52.607Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;访问&lt;a href=&quot;https://www.w3school.com.cn/html5/html_5_video.asp&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="html5" scheme="http://baiyazi.top/categories/html5/"/>
-    
-    
-      <category term="网页播放器" scheme="http://baiyazi.top/tags/%E7%BD%91%E9%A1%B5%E6%92%AD%E6%94%BE%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深思与反省</title>
-    <link href="http://baiyazi.top/2019/07/introspection-1/"/>
-    <id>http://baiyazi.top/2019/07/introspection-1/</id>
-    <published>2019-07-29T10:50:41.000Z</published>
-    <updated>2019-07-29T03:44:25.917Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;  直到写这篇文章的前段时间，一直都觉得“他强任他强，我弱认我弱”，然后总是寄希望于找一个贝壳把自己严严实实的包裹起来，或许是自己跟不上时代的步伐，也或许是因为自己的一无是处而导致的想永远逃离现实的愿景。&lt;br&gt; 
-        
-      
-    
-    </summary>
-    
-      <category term="introspection" scheme="http://baiyazi.top/categories/introspection/"/>
-    
-    
-      <category term="反思" scheme="http://baiyazi.top/tags/%E5%8F%8D%E6%80%9D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-145 | 二叉树的后序遍历</title>
-    <link href="http://baiyazi.top/2019/07/leetcode-145/"/>
-    <id>http://baiyazi.top/2019/07/leetcode-145/</id>
-    <published>2019-07-28T15:13:38.000Z</published>
-    <updated>2019-07-28T09:16:59.135Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个二叉树，返回它的 后序 遍历。&lt;/p&gt;
-&lt;p&gt; 示例:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入:
-        
-      
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://baiyazi.top/categories/leetcode/"/>
-    
-    
-      <category term="leetcode 困难难度" scheme="http://baiyazi.top/tags/leetcode-%E5%9B%B0%E9%9A%BE%E9%9A%BE%E5%BA%A6/"/>
-    
-      <category term="栈" scheme="http://baiyazi.top/tags/%E6%A0%88/"/>
-    
-      <category term="二叉树的遍历" scheme="http://baiyazi.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-94 | 二叉树的中序遍历</title>
-    <link href="http://baiyazi.top/2019/07/leetcode-94/"/>
-    <id>http://baiyazi.top/2019/07/leetcode-94/</id>
-    <published>2019-07-28T14:28:25.000Z</published>
-    <updated>2019-07-28T09:07:33.973Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个二叉树，返回它的 中序 遍历。&lt;/p&gt;
-&lt;p&gt; 示例:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入:
-        
-      
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://baiyazi.top/categories/leetcode/"/>
-    
-    
-      <category term="leetcode 中等难度" scheme="http://baiyazi.top/tags/leetcode-%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"/>
-    
-      <category term="栈" scheme="http://baiyazi.top/tags/%E6%A0%88/"/>
-    
-      <category term="二叉树的遍历" scheme="http://baiyazi.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-144 | 二叉树的前序遍历</title>
-    <link href="http://baiyazi.top/2019/07/leetcode-144/"/>
-    <id>http://baiyazi.top/2019/07/leetcode-144/</id>
-    <published>2019-07-27T15:47:22.000Z</published>
-    <updated>2019-07-28T09:10:59.661Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h1&gt;&lt;p&gt;给定一个二叉树，返回它的 前序 遍历。&lt;/p&gt;
-&lt;p&gt; 示例:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;输入:
-        
-      
-    
-    </summary>
-    
-      <category term="leetcode" scheme="http://baiyazi.top/categories/leetcode/"/>
-    
-    
-      <category term="leetcode 中等难度" scheme="http://baiyazi.top/tags/leetcode-%E4%B8%AD%E7%AD%89%E9%9A%BE%E5%BA%A6/"/>
-    
-      <category term="栈" scheme="http://baiyazi.top/tags/%E6%A0%88/"/>
-    
-      <category term="二叉树的遍历" scheme="http://baiyazi.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
     
   </entry>
   
