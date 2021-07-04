@@ -1,0 +1,27 @@
+/*三列的列表*/
+ul.three{padding-inline-start: 0;}
+ul.three li{list-style:none;display:flex;height:30px;}
+ul.three li span{flex:3;display:inline-block;height:30px;line-height:30px;text-align:left;border-top:1px solid #DDD;padding-left:10px;}
+ul.three li span:first-child{flex:1;border-right:1px solid #DDD;}
+ul.three li span:last-child{flex:1;border-left:1px solid #DDD;}
+ul.three li.lihead span{border-top:2px solid #000;}
+ul.three li.liend span{border-bottom:2px solid #000;}
+ul.three li.info{background-color:EFEFFE;}
+
+/*两列的列表*/
+ul.two{padding-inline-start: 0;}
+ul.two li{list-style:none;display:flex;}
+ul.two li.headbg{background-color:#eee;}
+ul.two li span{display:inline-block;line-height:30px;text-align:left;border-top:1px solid #DDD;padding-left:10px;}
+ul.two li span:first-child{flex:1;border-right:1px solid #000;font-weight:bolder;}
+ul.two li span:last-child{flex:2;border-left:1px solid #000;}
+ul.two li.lihead span{border-top:2px solid #000;}
+ul.two li.liend span{border-bottom:2px solid #000;}
+ul.two li.info span{background-color:#FEFEDD;display:block;text-align:center;border-left:none;border-right:none;}
+
+
+table.three {width:100%;border-collapse:collapse;border-color:#929c8f;display:flex;}
+table.three tr.head{background-color:#eee;font-weight:bolder;}
+table.three td{
+	padding:3px 5px 3px 10px;
+}
