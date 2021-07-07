@@ -678,23 +678,22 @@ main<span class="token punctuation">(</span><span class="token punctuation">)</s
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2019/10/pygame-4/">
+                <a href="/2019/10/pygame-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Pygame中的Color和显示器display">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Pygame图像绘制">
                         
-                        <span class="card-title">Pygame中的Color和显示器display</span>
+                        <span class="card-title">Pygame图像绘制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Pygame中的Color有下面三种生成Color颜色对象的方式：
-Color(r, g, b) -> Color
-Color(r, g, b, a=255) -> Color
-Color(color_value) -> Color
-也就是
+                            pygame使用功能pygame.draw模块来绘制形状。
+绘制图形绘制矩形pygame.draw.rect    # draw a rectangle
+有下面两种用法：
+rect(surface, color, rect) -> Rect
                         
                     </div>
                     <div class="publish-info">
@@ -731,26 +730,23 @@ Color(color_value) -> Color
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/pygame-2/">
+                <a href="/2019/10/pygame-4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Pygame中的convert()">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Pygame中的Color和显示器display">
                         
-                        <span class="card-title">Pygame中的convert()</span>
+                        <span class="card-title">Pygame中的Color和显示器display</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            convert()还是从案例开始：
-import pygame
-from pygame.locals import *
-
-def main():
-    # 初始化
-    pygame.init()
-    screen = pygame
+                            Pygame中的Color有下面三种生成Color颜色对象的方式：
+Color(r, g, b) -> Color
+Color(r, g, b, a=255) -> Color
+Color(color_value) -> Color
+也就是
                         
                     </div>
                     <div class="publish-info">

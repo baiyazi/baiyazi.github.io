@@ -72,10 +72,10 @@
   
   <entry>
     <title>研究生记事本</title>
-    <link href="http://yoursite.com/2021/07/xm-03/"/>
-    <id>http://yoursite.com/2021/07/xm-03/</id>
+    <link href="http://yoursite.com/2021/07/xm-01/"/>
+    <id>http://yoursite.com/2021/07/xm-01/</id>
     <published>2021-07-04T18:44:55.000Z</published>
-    <updated>2021-07-04T10:51:05.658Z</updated>
+    <updated>2021-07-07T07:15:16.445Z</updated>
     
     <summary type="html">
     
@@ -99,10 +99,10 @@
   
   <entry>
     <title>研究生记事本</title>
-    <link href="http://yoursite.com/2021/07/xm-01/"/>
-    <id>http://yoursite.com/2021/07/xm-01/</id>
+    <link href="http://yoursite.com/2021/07/xm-03/"/>
+    <id>http://yoursite.com/2021/07/xm-03/</id>
     <published>2021-07-04T18:44:55.000Z</published>
-    <updated>2021-07-07T07:15:16.445Z</updated>
+    <updated>2021-07-04T10:51:05.658Z</updated>
     
     <summary type="html">
     
@@ -320,32 +320,6 @@
   </entry>
   
   <entry>
-    <title>Pygame中的Color和显示器display</title>
-    <link href="http://yoursite.com/2019/10/pygame-4/"/>
-    <id>http://yoursite.com/2019/10/pygame-4/</id>
-    <published>2019-09-30T19:35:21.000Z</published>
-    <updated>2019-09-30T13:16:04.203Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Pygame中的Color&quot;&gt;&lt;a href=&quot;#Pygame中的Color&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
-    
-    
-      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Pygame中的Display Modes</title>
     <link href="http://yoursite.com/2019/10/pygame-3/"/>
     <id>http://yoursite.com/2019/10/pygame-3/</id>
@@ -360,6 +334,32 @@
         
           &lt;p&gt;&lt;a href=&quot;https://www.pygame.org/docs/tut/DisplayModes.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;Introduction&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
+    
+    
+      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pygame中的Color和显示器display</title>
+    <link href="http://yoursite.com/2019/10/pygame-4/"/>
+    <id>http://yoursite.com/2019/10/pygame-4/</id>
+    <published>2019-09-30T19:35:21.000Z</published>
+    <updated>2019-09-30T13:16:04.203Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Pygame中的Color&quot;&gt;&lt;a href=&quot;#Pygame中的Color&quot; class=&quot;headerlink&quot;
         
       
     
