@@ -1,0 +1,115 @@
+*,body,html{margin:0;border:0;padding:0;}
+body{background-color:#EEE;}
+a{text-decoration:none;color:#000;}
+ul, li{list-style:none;text-align:center;line-height:30px;}
+
+
+.container{
+	width:1000px;
+	margin:0 auto;
+	height:20px;
+}
+
+.container .top{
+	height:90px;
+	background-color:orange;
+	color:#fff;
+	border-bottom-left-radius:18px;
+	border-bottom-right-radius:18px;
+}
+.container .top .title{
+	font-size:2.5rem;
+	margin-left:20px;
+	line-height:60px;
+	text-align:left;
+}
+.container .top .sub-title{
+	line-height:20px;
+	font-size:16px;
+	text-align:left;
+	margin-left:40px;
+}
+
+.container .center .info{
+	margin:10 auto;
+	background:#fff;
+	border-left:4px solid orange;
+	height:42px;
+	padding:10px;
+}
+.container .center .info p{
+	line-height:21px
+	font-size:18px;
+	padding-left:5px;
+}
+
+.container .center .content{
+	display:relative;
+}
+.container .center .content div.content-left{
+	float:left;
+	background:orange;
+	width:180px;
+	padding:10px;
+	background-color:white;
+}
+.container .center .content div.content-left h2{
+	border-bottom:2px solid orange;
+	padding-bottom:5px;
+}
+.container .center .content div.content-right{
+	float:right;
+	height:20px;
+	width:780px;
+}
+
+
+.container .center .content div.content-right .content-top{
+	display:flex;
+}
+
+.container .center .content div.content-right .content-top div{
+	flex:1;
+	background-color:white;
+	text-align:center;
+	border-top-left-radius:18px;
+	border-top-right-radius:18px;
+	width:189px;
+}
+.container .center .content div.content-right .content-top div.two,
+.container .center .content div.content-right .content-top div.three{
+	border-left:4px solid #eee;
+}
+.container .center .content div.content-right .content-top div.three{
+	border-right:4px solid #eee;
+}
+.container .center .content div.content-right .content-top div img{
+	height:250px;
+	width:189px;
+	border-top-left-radius:18px;
+	border-top-right-radius:18px;
+}
+
+.container .center .content div.content-right .content-top div p{
+	margin-top:15px;
+	border-top:2px solid orange;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+
+.container .center .content div.content-right .content-bottom .post{
+	margin-top:10px;
+	background-color:white;
+}
+
+
+.container .center .content div.content-right .content-bottom .post h2{
+	padding:5px;
+	color:orange;
+}
+
+.container .center .content div.content-right .content-bottom .post p{
+	padding:10px;
+}
+

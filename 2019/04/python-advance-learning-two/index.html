@@ -1,0 +1,1150 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Python高级编程教程（二）| 第二章 上下文管理器, 梦否,学习之路,大前端开发">
+    <meta name="description" content="第二章 上下文管理器简介上下文管理器是装饰器的近亲，都是包装其他代码的工具。装饰器包装函数或者类；上下文管理器包装任意格式的代码块。在大多数情况下，作用等价。上下文管理器是一个包装任意代码块的对象。保证进入上下文管理器时，每次代码执行的一致">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Python高级编程教程（二）| 第二章 上下文管理器 | 梦否</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">梦否</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>主页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lifes" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">梦否</div>
+        <div class="logo-desc">
+            
+            吞噬你的很多时候不是金涛骇浪，相反是那些普通的日子。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                主页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lifes" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                生活
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/baiyazi" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/baiyazi" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Python高级编程教程（二）| 第二章 上下文管理器
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Python/" target="_blank">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python高级编程教程系列/" class="post-category" target="_blank">
+                                Python高级编程教程系列
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-04-15
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
+                        1.8k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
+                        7 Min
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="第二章-上下文管理器"><a href="#第二章-上下文管理器" class="headerlink" title="第二章 上下文管理器"></a>第二章 上下文管理器</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>上下文管理器是装饰器的近亲，都是包装其他代码的工具。<br>装饰器包装函数或者类；上下文管理器包装任意格式的代码块。在大多数情况下，作用等价。<br>上下文管理器是一个包装任意代码块的对象。保证进入上下文管理器时，每次代码执行的一致性；当退出上下文管理器时，相关的资源会被正确回收。<br>上下文管理器应用最多的就是–作为确保资源被正确清理的一种方式。有点类似于try-exception-finally的结构。</p>
+<h2 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h2><p>我们先看看下面简单的打开文件的代码：</p>
+<pre class=" language-python"><code class="language-python">file <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'a.txt'</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">)</span>
+file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span>
+file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>如果在文件打开失败了，代码执行到<code>file.close()</code>就会是一个空对象执行<code>close()</code>方法。<br>显然这是不行的，所以有了下面的代码：</p>
+<pre class=" language-python"><code class="language-python">file <span class="token operator">=</span> <span class="token string">""</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    file <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">'a.txt'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+    file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'se'</span><span class="token punctuation">)</span>
+<span class="token keyword">finally</span><span class="token punctuation">:</span>
+    file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p><code>finally</code>语句块中的代码无论try语句块中发生了什么都会执行。因此可以保证文件一定会关闭。这么做有什么问题么？当然没有，但当我们写一些更复杂的代码的时候，<code>try-finally</code>语句就会变得丑陋无比。<br>Python内置函数open也可以作为上下文管理器使用，所以就有了下面的改进版本：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">"a.txt"</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'Hello '</span><span class="token punctuation">)</span></code></pre>
+<p><strong><code>“with”</code>是一个新关键词，并且总是伴随着上下文管理器出现</strong><br><code>__enter__</code> 方法的返回结果会被赋给<code>as</code>关键字之后的变量。<br><code>__exit__</code> 方法则在离开代码块之后被调用(即使在代码块中遇到了异常)。<br>与装饰器相同的是，使用上下文管理器的关键原因在于避免代码的重复。</p>
+<h3 id="enter和exit方法"><a href="#enter和exit方法" class="headerlink" title="enter和exit方法"></a>enter和exit方法</h3><p>with语句的表达式的作用是返回一个遵循特定协议的对象。具体来说，该对象必须定义一个<code>__enter__</code>方法和一个<code>__exit__</code>方法，且后者必须接受特定参数。</p>
+<ul>
+<li><code>__enter__</code>方法，除了<code>self</code>参数外，不接受任何其他参数。一般来说，<code>__enter__</code>方法负责执行一些配置。</li>
+<li><code>__exit__</code>方法，除了<code>self</code>参数外，还有三个位置参数：一个异常类型、一个异常实例、一个回溯。如果没有异常，这3个参数全被设置成<code>None</code>，但如果在代码中发生了异常，则参数被填充。</li>
+</ul>
+<p><strong>下面举一个简单的例子</strong></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>entered <span class="token operator">=</span> <span class="token boolean">False</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>entered <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> self
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>entered <span class="token operator">=</span> <span class="token boolean">False</span>
+
+t <span class="token operator">=</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>entered<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># False</span>
+
+<span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> t<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>entered<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># True</span>
+</code></pre>
+<p>上面有两种调用方式，右边分别给出了运行的结果。不难看出：<code>with</code>和普通调用的区别就在于是否执行了<code>__enter__</code>方法。</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p><code>__exit__</code>方法中可以选择性地处理包装代码块中出现的异常，或者处理其他需要关闭上下文管理器状态的事情。（具体的异常处理，本文后面会讲解）</p>
+<h2 id="自定义上下文管理器"><a href="#自定义上下文管理器" class="headerlink" title="自定义上下文管理器"></a>自定义上下文管理器</h2><p>要实现上下文管理器，必须实现两个方法 – 一个负责进入语句块的准备操作，另一个负责离开语句块的善后操作。<br>Python类包含两个特殊的方法，分别名为：<code>__enter__</code>以及<code>__exit__</code>(双下划线作为前缀及后缀)。</p>
+<blockquote>
+<p>当一个对象被用作上下文管理器时：<br><code>__enter__</code> 方法的返回结果会被赋给<code>as</code>关键字之后的变量。<br><code>__exit__</code> 方法则在离开代码块之后被调用(即使在代码块中遇到了异常)。<br>与装饰器相同的是，使用上下文管理器的关键原因在于避免代码的重复。</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Enter"</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>unused<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Exit"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"invoking"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#运行结果</span>
+<span class="token comment" spellcheck="true">#Enter</span>
+<span class="token comment" spellcheck="true">#invoking</span>
+<span class="token comment" spellcheck="true">#Exit</span></code></pre>
+<p>在此没有使用<code>“as”</code>关键词。下面我们自己定义打开文件的方法：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">TestOpen</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 新增初始化方法</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filename<span class="token punctuation">,</span> mode<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>filename <span class="token operator">=</span> filename
+        self<span class="token punctuation">.</span>mode <span class="token operator">=</span> mode
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>openfile <span class="token operator">=</span> open<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filename<span class="token punctuation">,</span> self<span class="token punctuation">.</span>mode<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>openfile
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>unused<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>openfile<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> TestOpen<span class="token punctuation">(</span><span class="token string">"a.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> file<span class="token punctuation">:</span>
+    file<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Hello world"</span><span class="token punctuation">)</span></code></pre>
+<p>如果语句块内部发生了异常，<code>__exit__</code>方法将被调用，而异常将会被重新抛出(re-raised)。我们可以让<code>__exit__</code>方法简单的返回True来忽略语句块中发生的所有异常(大部分情况下这都不是明智之举)。</p>
+<h2 id="何时应该编写上下文管理器"><a href="#何时应该编写上下文管理器" class="headerlink" title="何时应该编写上下文管理器"></a>何时应该编写上下文管理器</h2><h3 id="资源清理"><a href="#资源清理" class="headerlink" title="资源清理"></a>资源清理</h3><p>打开和关闭资源（如数据库和文件的连接）。确保异常时正确关闭资源很重要。如下面连接数据库的案例：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
+
+<span class="token keyword">class</span> <span class="token class-name">DBConnection</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> dbName<span class="token operator">=</span>None<span class="token punctuation">,</span>user<span class="token operator">=</span>None<span class="token punctuation">,</span>password<span class="token operator">=</span>None<span class="token punctuation">,</span>host<span class="token operator">=</span><span class="token string">'localhost'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>host <span class="token operator">=</span> host
+        self<span class="token punctuation">.</span>dbName <span class="token operator">=</span> dbName
+        self<span class="token punctuation">.</span>user <span class="token operator">=</span> user
+        self<span class="token punctuation">.</span>password <span class="token operator">=</span> password
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>connectioin <span class="token operator">=</span> pymysql<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>host<span class="token punctuation">,</span>self<span class="token punctuation">.</span>user<span class="token punctuation">,</span>self<span class="token punctuation">.</span>password<span class="token punctuation">,</span> self<span class="token punctuation">.</span>dbName<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>connectioin<span class="token punctuation">.</span>cursor<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>connectioin<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> DBConnection<span class="token punctuation">(</span>dbName<span class="token operator">=</span><span class="token string">'weizu'</span><span class="token punctuation">,</span>user<span class="token operator">=</span><span class="token string">'root'</span><span class="token punctuation">,</span>password<span class="token operator">=</span><span class="token string">'123'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> db<span class="token punctuation">:</span>
+    db<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">'SELECT VERSION()'</span><span class="token punctuation">)</span>
+    data <span class="token operator">=</span> db<span class="token punctuation">.</span>fetchall<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># (('5.7.24',),)</span></code></pre>
+<h3 id="避免重复"><a href="#避免重复" class="headerlink" title="避免重复"></a>避免重复</h3><p>最常见的是避免重复处理异常。上下文管理器能够传播和终止异常，那么就最好将它和<code>except</code>子句放在同一个地方定义。</p>
+<h4 id="1-传播异常"><a href="#1-传播异常" class="headerlink" title="1.传播异常"></a>1.传播异常</h4><p><code>__exit__</code>方法只是向流程链上传播异常，这是通过返回<code>False</code>实现的，根本不需要与异常实例进行交互，如下面的上下文管理器：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> exc_val<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Bubbling up exception: %s'</span> <span class="token operator">%</span> exc_val<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token number">5</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token comment" spellcheck="true"># Traceback (most recent call last):</span>
+<span class="token comment" spellcheck="true"># Bubbling up exception: division by zero</span>
+<span class="token comment" spellcheck="true">#   File "E:/codes/django_learn01/blog/test.py", line 14, in &lt;module></span>
+<span class="token comment" spellcheck="true">#     5/0</span>
+<span class="token comment" spellcheck="true"># ZeroDivisionError: division by zero</span></code></pre>
+<p>观察上面的结果，<code>__exit__</code>方法确实执行到了<code>return False</code>。因为输出了<code>print</code>，然后必然执行的是<code>return</code>，所以发送给<code>__exit__</code>的异常只是被重新抛出了。</p>
+<h4 id="2-终止异常"><a href="#2-终止异常" class="headerlink" title="2.终止异常"></a>2.终止异常</h4><p>不妨试试，将<code>__exit__</code>中的<code>return False</code>改为<code>return True</code>。看是否还会抛出异常，显然不会。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> exc_val<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Bubbling up exception: %s'</span> <span class="token operator">%</span> exc_val<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+<span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token number">5</span><span class="token operator">/</span><span class="token number">0</span>
+<span class="token comment" spellcheck="true"># ZeroDivisionError: division by zero</span></code></pre>
+<ul>
+<li>回溯消失了。</li>
+<li>由于异常被<code>__exit__</code>方法处理终止了，因此程序没有引发异常，继续执行。<br>但是，永远也不要这样做</li>
+</ul>
+<h4 id="3-处理特定异常类"><a href="#3-处理特定异常类" class="headerlink" title="3.处理特定异常类"></a>3.处理特定异常类</h4><p>在<code>__exit__</code>方法中，可以仅检查是否是特定异常类的实例，执行异常处理。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> exc_type<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">if</span> issubclass<span class="token punctuation">(</span>exc_type<span class="token punctuation">,</span>ValueError<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ValueError: %s"</span> <span class="token operator">%</span> exc_val<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+<span class="token comment" spellcheck="true">#end</span>
+</code></pre>
+<p>下面是一些测试的代码：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"wrong value."</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># ValueError: wrong value.</span>
+</code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">with</span> Test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">raise</span> TypeError<span class="token punctuation">(</span><span class="token string">"wrong type."</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Traceback (most recent call last):</span>
+<span class="token comment" spellcheck="true">#   File "E:/codes/django_learn01/blog/test.py", line 21, in &lt;module></span>
+<span class="token comment" spellcheck="true">#     raise TypeError("wrong type.")</span>
+<span class="token comment" spellcheck="true"># TypeError: wrong type.</span>
+</code></pre>
+<p>但是，就本身而言，这并没有多少价值，毕竟可以使用一个更加直观的<code>try</code>代替：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    do something
+<span class="token keyword">except</span> ValueError <span class="token keyword">as</span> exc_instance<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ValueError: %s"</span> <span class="token operator">%</span> exc_instance<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>在网页中，加入如下的<code>JavaScript</code>代码，可以实现网页的<code>伪加密</code>：</p>
+<pre class=" language-JavaScript"><code class="language-JavaScript"><script>
+    window.onload=function(){
+     var pa = prompt('请输入文章密码');
+     if(pa!='123'){
+          history.back();
+     }
+    };
+</script>
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>Reprint policy</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《Python高级编程教程（二）| 第二章 上下文管理器》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/04/python-advance-learning-two/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                梦否
+            </a> is licensed under a
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a> 
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2019/04/leetcode-1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="leetcode-1 | Two Sum 简单难度">
+                        
+                        <span class="card-title">leetcode-1 | Two Sum 简单难度</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1. 两数之和（Two Sum）给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
+
+示
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/leetcode/" class="post-category" target="_blank">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode-简单难度/" target="_blank">
+                        <span class="chip bg-color">leetcode 简单难度</span>
+                    </a>
+                    
+                    <a href="/tags/数组/" target="_blank">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/04/python-advance-learning-one/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Python高级编程教程（一）| 第一章 装饰器类">
+                        
+                        <span class="card-title">Python高级编程教程（一）| 第一章 装饰器类</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            第一章 装饰器类简介用于封装函数或者类代码的工具。其核心也就是一个可以接受调用也可以返回调用的调用。无非就是一个函数（或调用），该函数接受被装饰的函数作为其位置参数。装饰器通过使用该参数来执行一些操作，然后返回原始参数或者其他的一些调用。装
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python高级编程教程系列/" class="post-category" target="_blank">
+                                    Python高级编程教程系列
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: 梦否<br />'
+            + 'Author: 梦否<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;2019&nbsp;&nbsp;Baiyazi &nbsp;Base on &nbsp;<font style="color:#eee;">matery</font>&nbsp;主题.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">165.7k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                <div style="width:300px;margin:0 auto; padding:20px 0;">
+		    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010802000714" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/beian/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#DBDBDB;">川公网安备 51010802000714号</p></a>
+		</div>
+		
+            	 
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/baiyazi" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1270563429@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1270563429" class="tooltipped" data-tooltip="QQ联系我: 1270563429" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
