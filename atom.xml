@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-11-07T07:17:02.983Z</updated>
+  <updated>2021-11-09T08:21:19.678Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-03/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-03/</id>
+    <published>2021-11-09T08:15:08.232Z</published>
+    <updated>2021-11-09T08:21:19.678Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121220878&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-02/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-02/</id>
+    <published>2021-11-09T08:12:10.820Z</published>
+    <updated>2021-11-09T08:17:53.011Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121061646&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-01/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-01/</id>
+    <published>2021-11-09T08:11:01.300Z</published>
+    <updated>2021-11-09T08:16:31.219Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/120992273&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android插件化开发指南——2.15
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Reactk开发 | 核心概念</title>
@@ -482,86 +560,6 @@
         
           &lt;p&gt;pygame使用功能pygame.draw模块来绘制形状。&lt;/p&gt;
 &lt;h2 id=&quot;绘制图形&quot;&gt;&lt;a href=&quot;#绘制图形&quot; class=&quot;headerlink&quot; title=&quot;绘制图形&quot;&gt;&lt;/a&gt;绘制图形&lt;/h2&gt;&lt;h3 id=&quot;绘制矩形&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
-    
-    
-      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pygame中的Display Modes</title>
-    <link href="http://yoursite.com/2019/10/pygame-3/"/>
-    <id>http://yoursite.com/2019/10/pygame-3/</id>
-    <published>2019-09-30T19:35:21.000Z</published>
-    <updated>2019-09-30T12:44:11.258Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://www.pygame.org/docs/tut/DisplayModes.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
-    
-    
-      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pygame中的Color和显示器display</title>
-    <link href="http://yoursite.com/2019/10/pygame-4/"/>
-    <id>http://yoursite.com/2019/10/pygame-4/</id>
-    <published>2019-09-30T19:35:21.000Z</published>
-    <updated>2019-09-30T13:16:04.203Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Pygame中的Color&quot;&gt;&lt;a href=&quot;#Pygame中的Color&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
-    
-    
-      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pygame中的convert()</title>
-    <link href="http://yoursite.com/2019/10/pygame-2/"/>
-    <id>http://yoursite.com/2019/10/pygame-2/</id>
-    <published>2019-09-30T18:41:27.000Z</published>
-    <updated>2019-09-30T11:33:39.161Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;convert&quot;&gt;&lt;a href=&quot;#convert&quot; class=&quot;headerlink&quot; title=&quot;convert()&quot;&gt;&lt;/a&gt;convert()&lt;/h2&gt;&lt;p&gt;还是从案例开始：&lt;/p&gt;
-&lt;pre class=&quot;
         
       
     
