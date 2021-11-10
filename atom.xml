@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-11-09T08:21:19.678Z</updated>
+  <updated>2021-11-10T07:09:39.265Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <title>Android插件化开发指南 | 仿酷狗音乐首页</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-04/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-04/</id>
+    <published>2021-11-10T07:07:56.502Z</published>
+    <updated>2021-11-10T07:09:39.265Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121069213&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | ViewPager+Fragment优化（预加载和懒加载）</title>
     <link href="http://yoursite.com/2021/11/android-plugin-dev-03/"/>
     <id>http://yoursite.com/2021/11/android-plugin-dev-03/</id>
     <published>2021-11-09T08:15:08.232Z</published>
-    <updated>2021-11-09T08:21:19.678Z</updated>
+    <updated>2021-11-10T06:52:45.458Z</updated>
     
     <summary type="html">
     
@@ -43,11 +69,11 @@
   </entry>
   
   <entry>
-    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <title>Android插件化开发指南 | Activity转场效果（仿酷狗音乐启动页）</title>
     <link href="http://yoursite.com/2021/11/android-plugin-dev-02/"/>
     <id>http://yoursite.com/2021/11/android-plugin-dev-02/</id>
     <published>2021-11-09T08:12:10.820Z</published>
-    <updated>2021-11-09T08:17:53.011Z</updated>
+    <updated>2021-11-10T06:51:59.903Z</updated>
     
     <summary type="html">
     
@@ -533,33 +559,6 @@
         
         
           &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
-    
-    
-      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pygame图像绘制</title>
-    <link href="http://yoursite.com/2019/10/pygame-5/"/>
-    <id>http://yoursite.com/2019/10/pygame-5/</id>
-    <published>2019-09-30T21:19:49.000Z</published>
-    <updated>2019-10-01T07:35:09.175Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;pygame使用功能pygame.draw模块来绘制形状。&lt;/p&gt;
-&lt;h2 id=&quot;绘制图形&quot;&gt;&lt;a href=&quot;#绘制图形&quot; class=&quot;headerlink&quot; title=&quot;绘制图形&quot;&gt;&lt;/a&gt;绘制图形&lt;/h2&gt;&lt;h3 id=&quot;绘制矩形&quot;&gt;&lt;a
         
       
     
