@@ -1,0 +1,1122 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="分而治之(divide-and-conquer), 梦否,学习之路,大前端开发">
+    <meta name="description" content="分而治之(divide-and-conquer)简单了解算法分析与设计：
+
+分治法的设计思想： 将一个难以直接解决的大问题，分割成一些规模比较小的相同问题，以便各个击破，分而治之。
+分治策略是： 对于一个规模为n的问题，若该问题可以容易地解">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>分而治之(divide-and-conquer) | 梦否</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/myblog/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/myblog/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">梦否</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>主页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/lifes" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>生活</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="Search"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">梦否</div>
+        <div class="logo-desc">
+            
+            吞噬你的很多时候不是金涛骇浪，相反是那些普通的日子。
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                主页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/lifes" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                生活
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/baiyazi" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/baiyazi" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        分而治之(divide-and-conquer)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/myblog/tags/分而治之/" target="_blank">
+                                <span class="chip bg-color">分而治之</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/myblog/categories/算法/" class="post-category" target="_blank">
+                                算法
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2019-09-15
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
+                        2.2k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
+                        8 Min
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="分而治之-divide-and-conquer"><a href="#分而治之-divide-and-conquer" class="headerlink" title="分而治之(divide-and-conquer)"></a>分而治之(divide-and-conquer)</h2><h3 id="简单了解"><a href="#简单了解" class="headerlink" title="简单了解"></a>简单了解</h3><p>算法分析与设计：</p>
+<ol>
+<li><strong>分治法的设计思想</strong>：<br> 将一个难以直接解决的大问题，分割成一些规模比较小的相同问题，以便各个击破，分而治之。</li>
+<li><strong>分治策略</strong>是：<br> 对于一个规模为n的问题，若该问题可以容易地解决（比如说规模n比较小则直接解决，否则将其分解为k个规模较小的子问题，<span style="color:red;font-weight:bolder;">这些子问题相互独立且与原问题形式相同</span>，递归地解决这些子问题，然后将各个子问题的解合并得到原问题的解。</li>
+<li>分治法所能解决的问题一般具有以下几个<strong>特征</strong>：<br>①该问题的规模缩小到一定的程度就可以容易地解决；<br>②<strong>该问题可以分解为若干个规模较小的相同问题，即该问题具有最优子结构性质；</strong>【能用分治法解决问题的前提】<br>③<strong>利用该问题分解出的子问题的解可以合并为该问题的解</strong>；【能用分治法解决问题的关键】<br>④该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子子问题。<br>具备了第一条和第二条特征，而且不具备第三条特征，考虑使用贪心法或动态规划。<br>具备了第一条、第二条特征和第三特征，而不具备第四条特征，一般考虑动态规划。</li>
+<li>三个步骤<br>①分解：<span style="color:blue;font-weight:bolder;">将原问题分解成为若干个规模较小、相互独立、与原问题形式相同的子问题</span>；<br>②解决：<span style="color:orange;font-weight:bolder;">若子问题的规模较小而容易被直接解决则直接解，否则递归地解各个子问题</span>；<br>③合并：将各个子问题的解<span style="color:red;font-weight:bolder;">合并</span>为原问题的解。</li>
+</ol>
+<p>算法基础（第五版）：<br>将一个问题的实例划分为两个或者更多个较小的实例。这些较小的实例通常也是原问题的实例。如果可以轻松获取小问题实例的答案，那么通过合并这些答案，就能得出原实例的答案。如果这些较小的实例还是太大，难以轻松解决，可以将它们划分为再小一些的实例。一直持续这一实例划分过程，直到其规模小的可以轻松获取得到答案为止。</p>
+<p>分而治之是一种<strong>自顶向下(top-down)</strong>的方法。<br>通过向下获得较小的实例的答案，以获得一个问题的答案。不难发现<strong>递归</strong>就是使用这种方法。</p>
+<h3 id="从案例开始"><a href="#从案例开始" class="headerlink" title="从案例开始"></a>从案例开始</h3><p>二分法查找的递归案例，给定数列<code>[5,12,23,36,39,50,62,73,80,99]</code>，查找<code>23</code>。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> list<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>list <span class="token operator">=</span> list
+        self<span class="token punctuation">.</span>x <span class="token operator">=</span> x
+    <span class="token keyword">def</span> <span class="token function">divide</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> len<span class="token punctuation">(</span>self<span class="token punctuation">.</span>list<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">or</span> low <span class="token operator">></span> high<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+        mid <span class="token operator">=</span> <span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>x <span class="token operator">==</span> self<span class="token punctuation">.</span>list<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> mid
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>x <span class="token operator">></span> self<span class="token punctuation">.</span>list<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>divide<span class="token punctuation">(</span>mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>divide<span class="token punctuation">(</span>low<span class="token punctuation">,</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">36</span><span class="token punctuation">,</span><span class="token number">39</span><span class="token punctuation">,</span><span class="token number">50</span><span class="token punctuation">,</span><span class="token number">62</span><span class="token punctuation">,</span><span class="token number">73</span><span class="token punctuation">,</span><span class="token number">80</span><span class="token punctuation">,</span><span class="token number">99</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>Solution<span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">.</span>divide<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>这个案例中我遇到的问题：关于<code>if-else</code>分支中的<code>return</code><br>顺这思路写代码的过程中，我就写成了这样：</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">if</span> self<span class="token punctuation">.</span>x <span class="token operator">==</span> self<span class="token punctuation">.</span>list<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> mid
+<span class="token keyword">elif</span> self<span class="token punctuation">.</span>x <span class="token operator">></span> self<span class="token punctuation">.</span>list<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>divide<span class="token punctuation">(</span>mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>divide<span class="token punctuation">(</span>low<span class="token punctuation">,</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span></code></pre>
+<p>而主观的认为在分支<code>if</code>中我已经清晰的表达了我所需要的意思，也就是我那里是可以返回最终的<code>mid</code>的。<br>但是，却忘记了<strong>函数的自调用，也是函数的调用</strong>，而返回值是返回在函数的额调用处。<br>也就是最终的结果是在<code>elif</code>分支中得到值，但是我并没有接收，也没有返回。<br>故而需要加上<code>return</code></p>
+<h3 id="LeetCode-53题"><a href="#LeetCode-53题" class="headerlink" title="LeetCode 53题"></a>LeetCode 53题</h3><p>最大子段和问题：<br>输入:<code>[-2,1,-3,4,-1,2,1,-5,4]</code>,<br>输出: <code>6</code><br>解释: 连续子数组 <code>[4,-1,2,1]</code> 的和最大，为 <code>6</code>。</p>
+<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>（1）划分：按照平衡子问题的原则，将序列<code>(a1, a2, a3, ... , an)</code>划分成长度相同的两个子序列<code>(a1, a2, a3, ... , a(n/2))</code>和<code>(a(n/2)+1, ... , an)</code>，则会出现下面三种情况：<br>①<code>a1, a2, a3, ... , an</code>的最大子段和 = <code>a1, a2, a3, ... , a(n/2)</code>的最大字段和；<br>②<code>a1, a2, a3, ... , an</code>的最大子段和 = <code>a(n/2)+1, ... , an</code> 的最大字段和；<br>③<code>a1, a2, a3, ... , an</code>的最大子段和 = <code>ai+a(i+1)+ ... + a(j-1)+a(j)，[1≤i≤n/2， n/2+1≤j≤n]</code>的最大字段和；<br>（2）求解子问题：情况①和②递归求解，情况③分别计算：<br><code>s1=max(ai+a(i+1)+ ... + n/2) ， 1≤i≤n/2</code><br><code>s2=max(a(n/2+1)+ ... + an) ，n/2+1≤j≤n</code><br>也就是说必含有两端断口的序列项。<br>（3）合并：取三者之中较大者为原问题的解。</p>
+<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">maxSubArray</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span>int<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> int<span class="token punctuation">:</span>
+        n <span class="token operator">=</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#序列长度为1，直接计算</span>
+        <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true">#递归计算左半边最大子序和</span>
+            max_left <span class="token operator">=</span> self<span class="token punctuation">.</span>maxSubArray<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true">#递归计算右半边最大子序和</span>
+            max_right <span class="token operator">=</span> self<span class="token punctuation">.</span>maxSubArray<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">:</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true"># 对应情况三</span>
+            <span class="token comment" spellcheck="true">#计算中间的最大子序和，从右到左计算左边的最大子序和，从左到右计算右边的最大子序和，再相加</span>
+            max_l <span class="token operator">=</span> nums<span class="token punctuation">[</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+            tmp <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                tmp <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                max_l <span class="token operator">=</span> max<span class="token punctuation">(</span>tmp<span class="token punctuation">,</span> max_l<span class="token punctuation">)</span>
+            max_r <span class="token operator">=</span> nums<span class="token punctuation">[</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">]</span>
+            tmp <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                tmp <span class="token operator">+=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                max_r <span class="token operator">=</span> max<span class="token punctuation">(</span>tmp<span class="token punctuation">,</span> max_r<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#返回三个中的最大值</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">(</span>max_right<span class="token punctuation">,</span>max_left<span class="token punctuation">,</span>max_l<span class="token operator">+</span>max_r<span class="token punctuation">)</span></code></pre>
+<p>结果：<br><img src="/images/201909/2019-09-15_201758.png" alt></p>
+<p>这里需要注意的是，递归的效率本来就不高，如果不截取列表，而直接传入原列表到调用，并定义<code>left</code>和<code>right</code>的下表指向，会超时。<br>在<code>leetcode</code>中，我测试了一下，参数用的列表,<code>left</code>下表,<code>right</code>下表，最后两个没通过，超时。</p>
+<h3 id="两路合并-Two-Way-Merging"><a href="#两路合并-Two-Way-Merging" class="headerlink" title="两路合并(Two-Way-Merging)"></a>两路合并(Two-Way-Merging)</h3><p>和上一题的思路类似，过程如下：<br>①划分：将数组划分成两个各自包含<code>n/2</code>个数据项的子数组<br>②求解子问题：解决每个子数组，对其排序。除非数组足够小，否则以递推的方式完成此任务。<br>③合并：将子数组合并为单个有序数组，以合并这些子数组的答案。</p>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>待排序数组：<code>[27,10,12,20,25,13,15,22]</code>，过程分析<br><img src="/images/201909/2019-09-15_204458.png" alt></p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">TwoWayMerging</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"nums into:"</span> <span class="token punctuation">,</span> nums<span class="token punctuation">)</span>
+        a <span class="token operator">=</span> nums<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true"># 小规模问题，直接求解</span>
+        <span class="token keyword">if</span> len<span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">or</span> len<span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> a
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> len<span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+            u <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
+            v <span class="token operator">=</span> a<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"U:"</span> <span class="token punctuation">,</span> u<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>TwoWayMerging<span class="token punctuation">(</span>u<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"V:"</span> <span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>TwoWayMerging<span class="token punctuation">(</span>v<span class="token punctuation">)</span>
+            <span class="token comment" spellcheck="true"># 情况三</span>
+            i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">while</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">and</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment" spellcheck="true"># print("k is :" , k)</span>
+                <span class="token keyword">if</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;</span> v<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                    i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> v<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                    j <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
+                k <span class="token operator">=</span> k <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">while</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+                k <span class="token operator">=</span> k <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">while</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                nums<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> v<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                j <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
+                k <span class="token operator">=</span> k <span class="token operator">+</span> <span class="token number">1</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"nums out:"</span> <span class="token punctuation">,</span> nums<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> nums
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>Solution<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>TwoWayMerging<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">27</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+    a  <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">27</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">]</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span>
+    test<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></code></pre>
+<p>观察前面两个案例的代码，不难发现共同点，第三步的合并，其实也是作用在小规模中的，只是在处理的时候，我们就看做是两个整体列表的排序。<br>为了观察效果，不妨把案例代码中的<code>print</code>前面的注释去除掉。<br>然后自己画一个栈，自己模拟一下代码是如何运行的。<br>比如<code>[14,5,6,23]</code>进入，<br><code>u1=[14,5], v1=[6,23]</code><br>然后<code>u1</code>作为下一次的<code>nums</code>，进入<br><code>u2=[14]，v2=[5]</code><br>满足退出条件，然后将<code>v2，u2</code>进行排序，排序完成，记录到<code>nums</code>中，也就是<code>u1</code>，<br>此时<code>u1=[5,14]</code>。<br>同理<code>v1</code>，入栈，进入进行相同的操作，得到<code>v1=[6,23]</code><br>此时完成了对<code>u1,v1</code>的两部分的排序，然后进行这两个的整体排序，记录到初始传入的列表<code>[14,5,6,23]</code>中。<br>最后饭后的也是这个列表的排序结果，即：<code>[5,6,14,23]</code></p>
+<h4 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h4><p>分治法求一个数组中最大的元素的位置。</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>nums <span class="token operator">=</span> nums
+
+    <span class="token keyword">def</span> <span class="token function">FindMaxPos</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true"># 小规模直接得结果</span>
+        <span class="token keyword">if</span> low <span class="token operator">==</span> high<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> low
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> <span class="token punctuation">(</span>low<span class="token operator">+</span>high<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+            left_index <span class="token operator">=</span> self<span class="token punctuation">.</span>FindMaxPos<span class="token punctuation">(</span>low<span class="token punctuation">,</span> mid<span class="token punctuation">)</span>
+            right_index <span class="token operator">=</span> self<span class="token punctuation">.</span>FindMaxPos<span class="token punctuation">(</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>nums<span class="token punctuation">[</span>left_index<span class="token punctuation">]</span> <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>nums<span class="token punctuation">[</span>right_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> right_index
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> left_index
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">27</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">205</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>Solution<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">.</span>FindMaxPos<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># 4</span></code></pre>
+<p>上面的案例比较简单，不妨看看LeetCode中的分治题目。<br><a href="/2019/09/leetcode-23/">leetcode 23题</a></p>
+
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>Reprint policy</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《分而治之(divide-and-conquer)》
+                </span> by
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/myblog/2019/09/algorithms-1/" property="cc:attributionName"
+               rel="cc:attributionURL">
+                梦否
+            </a> is licensed under a
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a> 
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/myblog/2019/09/leetcode-23/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="leetcode-23. 合并K个排序链表">
+                        
+                        <span class="card-title">leetcode-23. 合并K个排序链表</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            23. 合并K个排序链表题目描述合并 k 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。
+示例:
+
+输入:[  1-&gt;4-&gt;5,  1-&gt;3-&gt;4,  2-&gt;6]输出: 1-&gt;1-&gt;2
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/myblog/categories/leetcode/" class="post-category" target="_blank">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myblog/tags/leetcode-困难难度/" target="_blank">
+                        <span class="chip bg-color">leetcode 困难难度</span>
+                    </a>
+                    
+                    <a href="/myblog/tags/分治法/" target="_blank">
+                        <span class="chip bg-color">分治法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/myblog/2019/09/leetcode-103/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="leetcode-103 | 二叉树的锯齿形层次遍历">
+                        
+                        <span class="card-title">leetcode-103 | 二叉树的锯齿形层次遍历</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            103. 二叉树的锯齿形层次遍历题目描述给定一个二叉树，返回其节点值的锯齿形层次遍历。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。例如:给定二叉树: [3,9,20,null,null,15,7],返回其自底向
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/myblog/categories/leetcode/" class="post-category" target="_blank">
+                                    leetcode
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/myblog/tags/leetcode-中等难度/" target="_blank">
+                        <span class="chip bg-color">leetcode 中等难度</span>
+                    </a>
+                    
+                    <a href="/myblog/tags/二叉树/" target="_blank">
+                        <span class="chip bg-color">二叉树</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: 梦否<br />'
+            + 'Author: 梦否<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy;2019&nbsp;&nbsp;Baiyazi &nbsp;Base on &nbsp;<font style="color:#eee;">matery</font>&nbsp;主题.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">183.3k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                <div style="width:300px;margin:0 auto; padding:20px 0;">
+		    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010802000714" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/images/beian/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#DBDBDB;">川公网安备 51010802000714号</p></a>
+		</div>
+		
+            	 
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/baiyazi" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1270563429@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1270563429" class="tooltipped" data-tooltip="QQ联系我: 1270563429" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/myblog/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/myblog/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

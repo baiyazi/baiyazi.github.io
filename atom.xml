@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>梦否</title>
+  
+  <subtitle>Where there is a will,there is a way.</subtitle>
+  <link href="/myblog/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2021-11-10T07:09:39.265Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>梦否</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android插件化开发指南 | 仿酷狗音乐首页</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-04/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-04/</id>
+    <published>2021-11-10T07:07:56.502Z</published>
+    <updated>2021-11-10T07:09:39.265Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121069213&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | ViewPager+Fragment优化（预加载和懒加载）</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-03/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-03/</id>
+    <published>2021-11-09T08:15:08.232Z</published>
+    <updated>2021-11-10T06:52:45.458Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121220878&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | Activity转场效果（仿酷狗音乐启动页）</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-02/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-02/</id>
+    <published>2021-11-09T08:12:10.820Z</published>
+    <updated>2021-11-10T06:51:59.903Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121061646&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android插件化开发指南 | 2.15 实现一个音乐播放器APP</title>
+    <link href="http://yoursite.com/2021/11/android-plugin-dev-01/"/>
+    <id>http://yoursite.com/2021/11/android-plugin-dev-01/</id>
+    <published>2021-11-09T08:11:01.300Z</published>
+    <updated>2021-11-09T08:16:31.219Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/120992273&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Android插件化开发指南——2.15
+        
+      
+    
+    </summary>
+    
+      <category term="Android插件化开发" scheme="http://yoursite.com/categories/Android%E6%8F%92%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reactk开发 | 核心概念</title>
+    <link href="http://yoursite.com/2021/11/react-01/"/>
+    <id>http://yoursite.com/2021/11/react-01/</id>
+    <published>2021-11-07T07:15:08.258Z</published>
+    <updated>2021-11-07T07:17:02.983Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121046948&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;【React
+        
+      
+    
+    </summary>
+    
+      <category term="React开发" scheme="http://yoursite.com/categories/React%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reactk开发 | React Router 基础</title>
+    <link href="http://yoursite.com/2021/11/react-02/"/>
+    <id>http://yoursite.com/2021/11/react-02/</id>
+    <published>2021-11-07T07:10:47.490Z</published>
+    <updated>2021-11-07T07:13:58.558Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121099969&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;【React Native】从React开始——React
+        
+      
+    
+    </summary>
+    
+      <category term="React开发" scheme="http://yoursite.com/categories/React%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reactk开发 | 高级概念</title>
+    <link href="http://yoursite.com/2021/11/react-03/"/>
+    <id>http://yoursite.com/2021/11/react-03/</id>
+    <published>2021-11-07T07:05:13.272Z</published>
+    <updated>2021-11-07T07:14:44.425Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;欢迎访问：&lt;a href=&quot;https://blog.csdn.net/qq_26460841/article/details/121174545&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;【React
+        
+      
+    
+    </summary>
+    
+      <category term="React开发" scheme="http://yoursite.com/categories/React%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-107 |  二叉树的层次遍历 II</title>
+    <link href="http://yoursite.com/2021/11/leetcode-107/"/>
+    <id>http://yoursite.com/2021/11/leetcode-107/</id>
+    <published>2021-11-06T05:57:40.941Z</published>
+    <updated>2019-09-15T05:22:39.502Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;107-二叉树的层次遍历-II&quot;&gt;&lt;a href=&quot;#107-二叉树的层次遍历-II&quot; class=&quot;headerlink&quot; title=&quot;107. 二叉树的层次遍历 II&quot;&gt;&lt;/a&gt;107. 二叉树的层次遍历 II&lt;/h2&gt;&lt;h3 id=&quot;题目描述&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+    
+    
+      <category term="leetcode 简单难度" scheme="http://yoursite.com/tags/leetcode-%E7%AE%80%E5%8D%95%E9%9A%BE%E5%BA%A6/"/>
+    
+      <category term="二叉树" scheme="http://yoursite.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>校招简历</title>
+    <link href="http://yoursite.com/2021/10/resume/"/>
+    <id>http://yoursite.com/2021/10/resume/</id>
+    <published>2021-10-24T20:11:55.000Z</published>
+    <updated>2021-10-25T12:13:22.474Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;个人简历&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="研究生日迹本" scheme="http://yoursite.com/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%97%A5%E8%BF%B9%E6%9C%AC/"/>
+    
+    
+      <category term="Postgraduate" scheme="http://yoursite.com/tags/Postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生活备忘录（二）</title>
+    <link href="http://yoursite.com/2021/10/lifes-2/"/>
+    <id>http://yoursite.com/2021/10/lifes-2/</id>
+    <published>2021-10-24T19:52:53.000Z</published>
+    <updated>2021-10-24T11:53:07.732Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+           &lt;style&gt;
+    .lifes-row{width:100%;line-height:40px;display:flex;height:40px;margin-top:20px;}
+   
+        
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="细细碎碎的生活" scheme="http://yoursite.com/tags/%E7%BB%86%E7%BB%86%E7%A2%8E%E7%A2%8E%E7%9A%84%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生阶段项目</title>
+    <link href="http://yoursite.com/2021/07/xm-01/"/>
+    <id>http://yoursite.com/2021/07/xm-01/</id>
+    <published>2021-07-04T18:44:55.000Z</published>
+    <updated>2021-10-24T11:32:58.677Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Resume&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生阶段项目</title>
+    <link href="http://yoursite.com/2021/07/xm-02/"/>
+    <id>http://yoursite.com/2021/07/xm-02/</id>
+    <published>2021-07-04T18:44:55.000Z</published>
+    <updated>2021-10-24T11:33:25.104Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Resume&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生阶段项目</title>
+    <link href="http://yoursite.com/2021/07/xm-03/"/>
+    <id>http://yoursite.com/2021/07/xm-03/</id>
+    <published>2021-07-04T18:44:55.000Z</published>
+    <updated>2021-10-24T11:33:18.089Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Resume&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生阶段项目</title>
+    <link href="http://yoursite.com/2021/07/xm-04/"/>
+    <id>http://yoursite.com/2021/07/xm-04/</id>
+    <published>2021-07-04T18:44:55.000Z</published>
+    <updated>2021-10-24T11:33:36.108Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Resume&lt;/title&gt;
+ 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生记事本</title>
+    <link href="http://yoursite.com/2021/07/xh-ld-5/"/>
+    <id>http://yoursite.com/2021/07/xh-ld-5/</id>
+    <published>2021-07-04T13:03:30.000Z</published>
+    <updated>2021-11-14T04:42:01.997Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;日迹记事本（第N周） &lt;/title&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="研究生日迹本" scheme="http://yoursite.com/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%97%A5%E8%BF%B9%E6%9C%AC/"/>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生记事本</title>
+    <link href="http://yoursite.com/2021/07/xh-ld-6/"/>
+    <id>http://yoursite.com/2021/07/xh-ld-6/</id>
+    <published>2021-07-04T13:03:30.000Z</published>
+    <updated>2021-10-24T11:33:43.345Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;日迹记事本（研二暑假的尾巴）
+        
+      
+    
+    </summary>
+    
+      <category term="研究生日迹本" scheme="http://yoursite.com/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%97%A5%E8%BF%B9%E6%9C%AC/"/>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>K-近邻算法(二)</title>
+    <link href="http://yoursite.com/2019/10/ml-2/"/>
+    <id>http://yoursite.com/2019/10/ml-2/</id>
+    <published>2019-10-04T19:52:47.000Z</published>
+    <updated>2019-10-05T06:11:40.304Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;海伦约会案例&quot;&gt;&lt;a href=&quot;#海伦约会案例&quot; class=&quot;headerlink&quot; title=&quot;海伦约会案例&quot;&gt;&lt;/a&gt;海伦约会案例&lt;/h2&gt;&lt;p&gt;数据集可以在：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/categories/Machine-Learning/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>K-近邻算法(一)</title>
+    <link href="http://yoursite.com/2019/10/ml-1/"/>
+    <id>http://yoursite.com/2019/10/ml-1/</id>
+    <published>2019-10-04T15:14:33.000Z</published>
+    <updated>2019-10-04T11:52:12.223Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/categories/Machine-Learning/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生记事本</title>
+    <link href="http://yoursite.com/2019/10/xh-ld-4/"/>
+    <id>http://yoursite.com/2019/10/xh-ld-4/</id>
+    <published>2019-10-02T17:35:00.000Z</published>
+    <updated>2021-10-24T06:45:40.501Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.9.0&quot;&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;日迹记事本（第四周） &lt;/title&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="研究生日迹本" scheme="http://yoursite.com/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E6%97%A5%E8%BF%B9%E6%9C%AC/"/>
+    
+    
+      <category term="postgraduate" scheme="http://yoursite.com/tags/postgraduate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pygame图形贪吃蛇1.0</title>
+    <link href="http://yoursite.com/2019/10/pygame-6/"/>
+    <id>http://yoursite.com/2019/10/pygame-6/</id>
+    <published>2019-10-01T19:33:26.000Z</published>
+    <updated>2019-10-01T11:33:44.886Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="Pygame" scheme="http://yoursite.com/categories/Pygame/"/>
+    
+    
+      <category term="Pygame" scheme="http://yoursite.com/tags/Pygame/"/>
+    
+  </entry>
+  
+</feed>
