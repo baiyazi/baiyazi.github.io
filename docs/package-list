@@ -1,0 +1,9 @@
+com.weizu.downloader
+com.weizu.filedownloader.base
+com.weizu.filedownloader.bean
+com.weizu.filedownloader.config
+com.weizu.filedownloader.controller
+com.weizu.filedownloader.enums
+com.weizu.filedownloader.listener
+com.weizu.filedownloader.services
+com.weizu.filedownloader.utils
